@@ -163,12 +163,20 @@
   </section>
 
   <!-- JAVASCRIPT -->
-  <script>
-    function toggleDetails(id) {
-      const section = document.getElementById(id);
-      section.style.display = section.style.display === "block" ? "none" : "block";
-    }
-  </script>
+ <script>
+  function toggleDetails(id) {
+    // Ascunde toate secțiunile de detalii
+    const allDetails = document.querySelectorAll('.details-section');
+    allDetails.forEach(section => {
+      section.style.display = "none";
+    });
+
+    // Afișează doar secțiunea selectată
+    const selected = document.getElementById(id);
+    selected.style.display = "block";
+  }
+</script>
+
 
 </body>
 </html>
