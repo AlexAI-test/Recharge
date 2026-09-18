@@ -20,7 +20,7 @@
 
     <div class="car-grid">
 
-      <!-- VOLVO (cu expand) -->
+      <!-- VOLVO -->
       <div class="car-card" onclick="toggleVolvo()">
         <img src="images/eurocharge-volvo.jpg" alt="Volvo EX30">
         <div class="overlay">
@@ -29,19 +29,6 @@
           <p>baterie: 69 kWh</p>
           <p style="font-weight:bold; margin-top:10px;">Click pentru detalii</p>
         </div>
-      </div>
-
-      <!-- SECTIUNEA CARE SE DESCHIDE LA CLICK -->
-      <div id="volvo-details" class="details-section">
-        <h3>Detalii Volvo EX30</h3>
-
-        <p><strong>Specificații:</strong></p>
-        <ul>
-          <li>Putere: 200 kW</li>
-          <li>Baterie: 69 kWh</li>
-          <li>Autonomie: 410 km WLTP</li>
-          <li>Consum mediu: 16.5 kWh/100km</li>
-        </ul>
       </div>
 
       <!-- AUDI -->
@@ -100,30 +87,3 @@
         <div class="overlay">
           <p>Renault Megane EV</p>
           <p>putere: 160 kW</p>
-          <p>baterie: 60 kWh</p>
-        </div>
-      </div>
-
-      <!-- VOLKSWAGEN -->
-      <div class="car-card">
-        <img src="images/eurocharge-volkwagen.jpg" alt="Volkswagen ID.4">
-        <div class="overlay">
-          <p>Volkswagen ID.4</p>
-          <p>putere: 150 kW</p>
-          <p>baterie: 77 kWh</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- JAVASCRIPT -->
-  <script>
-    function toggleVolvo() {
-      const section = document.getElementById("volvo-details");
-      section.style.display = section.style.display === "block" ? "none" : "block";
-    }
-  </script>
-
-</body>
-</html>
