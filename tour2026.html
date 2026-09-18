@@ -20,99 +20,143 @@
 
     <div class="car-grid">
 
-      <!-- VOLVO -->
-      <div class="car-card" onclick="toggleVolvo()">
-        <img src="images/eurocharge-volvo.jpg" alt="Volvo EX30">
+      <!-- 1. VOLVO -->
+      <div class="car-card" onclick="toggleDetails('volvo-details')">
+        <img src="images/eurocharge-volvo.jpg" alt="Volvo ES90 Ultra Single Motor Extended Range">
         <div class="overlay">
-          <p>Volvo EX30</p>
-          <p>putere: 200 kW</p>
-          <p>baterie: 69 kWh</p>
-          <p style="font-weight:bold; margin-top:10px;">Click pentru detalii</p>
+          <p>Volvo ES90 Ultra Single Motor Extended Range</p>
         </div>
       </div>
 
-      <!-- AUDI -->
-      <div class="car-card">
-        <img src="images/eurocharge-audi.jpg" alt="Audi e-tron">
+      <!-- 2. MERCEDES -->
+      <div class="car-card" onclick="toggleDetails('mercedes-details')">
+        <img src="images/eurocharge-mercedes.jpg" alt="Mercedes-Benz GLC Electric 400 4Matic">
         <div class="overlay">
-          <p>Audi e-tron</p>
-          <p>putere: 300 kW</p>
-          <p>baterie: 95 kWh</p>
+          <p>Mercedes-Benz GLC Electric 400 4Matic</p>
         </div>
       </div>
 
-      <!-- BYD -->
-      <div class="car-card">
-        <img src="images/eurocharge-byd.jpg" alt="BYD Seal">
+      <!-- 3. PORSCHE -->
+      <div class="car-card" onclick="toggleDetails('porsche-details')">
+        <img src="images/eurocharge-porsche.jpg" alt="Porsche Cayenne Electric">
         <div class="overlay">
-          <p>BYD Seal</p>
-          <p>putere: 230 kW</p>
-          <p>baterie: 82 kWh</p>
+          <p>Porsche Cayenne Electric</p>
         </div>
       </div>
 
-      <!-- MAZDA -->
-      <div class="car-card">
-        <img src="images/eurocharge-mazda.jpg" alt="Mazda MX-30">
+      <!-- 4. RENAULT -->
+      <div class="car-card" onclick="toggleDetails('renault-details')">
+        <img src="images/eurocharge-renault.jpg" alt="Renault 5 Roland-Garros">
         <div class="overlay">
-          <p>Mazda MX-30</p>
-          <p>putere: 107 kW</p>
-          <p>baterie: 35.5 kWh</p>
+          <p>Renault 5 Roland-Garros</p>
         </div>
       </div>
 
-      <!-- MERCEDES -->
-      <div class="car-card">
-        <img src="images/eurocharge-mercedes.jpg" alt="Mercedes EQS">
+      <!-- 5. VOLKSWAGEN -->
+      <div class="car-card" onclick="toggleDetails('vw-details')">
+        <img src="images/eurocharge-volkwagen.jpg" alt="Volkswagen ID.Polo 52kWH Style">
         <div class="overlay">
-          <p>Mercedes EQS</p>
-          <p>putere: 385 kW</p>
-          <p>baterie: 108 kWh</p>
+          <p>Volkswagen ID.Polo 52kWH Style</p>
         </div>
       </div>
 
-      <!-- PORSCHE -->
-      <div class="car-card">
-        <img src="images/eurocharge-porsche.jpg" alt="Porsche Taycan">
+      <!-- 6. MAZDA -->
+      <div class="car-card" onclick="toggleDetails('mazda-details')">
+        <img src="images/eurocharge-mazda.jpg" alt="Mazda CX-6e Takumi Plus">
         <div class="overlay">
-          <p>Porsche Taycan</p>
-          <p>putere: 440 kW</p>
-          <p>baterie: 93 kWh</p>
+          <p>Mazda CX-6e Takumi Plus</p>
         </div>
       </div>
 
-      <!-- RENAULT -->
-      <div class="car-card">
-        <img src="images/eurocharge-renault.jpg" alt="Renault Megane EV">
+      <!-- 7. BYD -->
+      <div class="car-card" onclick="toggleDetails('byd-details')">
+        <img src="images/eurocharge-byd.jpg" alt="BYD Sealion 7 Design AWD">
         <div class="overlay">
-          <p>Renault Megane EV</p>
-          <p>putere: 160 kW</p>
-          <p>baterie: 60 kWh</p>
+          <p>BYD Sealion 7 Design AWD</p>
         </div>
       </div>
 
-      <!-- VOLKSWAGEN -->
-      <div class="car-card">
-        <img src="images/eurocharge-volkwagen.jpg" alt="Volkswagen ID.4">
+      <!-- 8. AUDI -->
+      <div class="car-card" onclick="toggleDetails('audi-details')">
+        <img src="images/eurocharge-audi.jpg" alt="Audi Q4 e-tron Sportback quattro">
         <div class="overlay">
-          <p>Volkswagen ID.4</p>
-          <p>putere: 150 kW</p>
-          <p>baterie: 77 kWh</p>
+          <p>Audi Q4 e-tron Sportback quattro</p>
         </div>
       </div>
 
     </div> <!-- FINAL GRID -->
 
-    <!-- DETALII VOLVO (acum sub toată lista) -->
-    <div id="volvo-details" class="details-section">
-      <h3>Detalii Volvo EX30</h3>
+    <!-- DETALII MASINI (template Power / Battery / Range) -->
 
-      <p><strong>Specificații:</strong></p>
+    <div id="volvo-details" class="details-section">
+      <h3>Volvo ES90 Ultra Single Motor Extended Range</h3>
       <ul>
-        <li>Putere: 200 kW</li>
-        <li>Baterie: 69 kWh</li>
-        <li>Autonomie: 410 km WLTP</li>
-        <li>Consum mediu: 16.5 kWh/100km</li>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="mercedes-details" class="details-section">
+      <h3>Mercedes-Benz GLC Electric 400 4Matic</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="porsche-details" class="details-section">
+      <h3>Porsche Cayenne Electric</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="renault-details" class="details-section">
+      <h3>Renault 5 Roland-Garros</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="vw-details" class="details-section">
+      <h3>Volkswagen ID.Polo 52kWH Style</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="mazda-details" class="details-section">
+      <h3>Mazda CX-6e Takumi Plus</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="byd-details" class="details-section">
+      <h3>BYD Sealion 7 Design AWD</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
+      </ul>
+    </div>
+
+    <div id="audi-details" class="details-section">
+      <h3>Audi Q4 e-tron Sportback quattro</h3>
+      <ul>
+        <li><strong>Power:</strong> </li>
+        <li><strong>Battery:</strong> </li>
+        <li><strong>Range:</strong> </li>
       </ul>
     </div>
 
@@ -120,11 +164,12 @@
 
   <!-- JAVASCRIPT -->
   <script>
-    function toggleVolvo() {
-      const section = document.getElementById("volvo-details");
+    function toggleDetails(id) {
+      const section = document.getElementById(id);
       section.style.display = section.style.display === "block" ? "none" : "block";
     }
   </script>
 
 </body>
 </html>
+
