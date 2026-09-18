@@ -127,3 +127,24 @@ body {
   text-decoration: none;
 }
 
+.details-section {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  color: white;
+}
+
+.infogrid {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.infogrid img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid #4db8ff;
+}
+
