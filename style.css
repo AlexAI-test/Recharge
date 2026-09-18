@@ -18,10 +18,18 @@ body {
   text-shadow: 0 0 15px rgba(0,0,0,0.8);
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
 .hero * {
   position: relative;
   z-index: 2;
 }
+
 
 
 
