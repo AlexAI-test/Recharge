@@ -166,5 +166,29 @@ body {
   transform: scale(1.05);
 }
 
+.spec-table {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 700px; /* ca să nu fie prea lat */
+}
+
+.spec-table .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.spec-table .label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.spec-table .value {
+  color: #cce6ff;
+  font-weight: 500;
+  text-align: right;
+  min-width: 150px; /* împinge valorile spre dreapta */
+}
 
 
