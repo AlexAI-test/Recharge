@@ -20,15 +20,38 @@
 
     <div class="car-grid">
 
-      <!-- VOLVO -->
-      <div class="car-card">
-        <img src="images/eurocharge-volvo.jpg" alt="Volvo EX30">
-        <div class="overlay">
-          <p>Volvo EX30</p>
-          <p>putere: 200 kW</p>
-          <p>baterie: 69 kWh</p>
-        </div>
-      </div>
+      <!-- VOLVO (cu expand) -->
+<div class="car-card" onclick="toggleVolvo()">
+  <img src="images/eurocharge-volvo.jpg" alt="Volvo EX30">
+  <div class="overlay">
+    <p>Volvo EX30</p>
+    <p>putere: 200 kW</p>
+    <p>baterie: 69 kWh</p>
+    <p style="font-weight:bold; margin-top:10px;">Click pentru detalii</p>
+  </div>
+</div>
+
+<!-- SECTIUNEA CARE SE DESCHIDE LA CLICK -->
+<div id="volvo-details" class="details-section">
+  <h3>Detalii Volvo EX30</h3>
+
+  <p><strong>Traseu zilnic:</strong></p>
+
+  <div class="infogrid">
+    <img src="images/infografic-ziua1.jpg" alt="Ziua 1">
+    <img src="images/infografic-ziua2.jpg" alt="Ziua 2">
+    <img src="images/infografic-ziua3.jpg" alt="Ziua 3">
+  </div>
+
+  <p><strong>Specificații:</strong></p>
+  <ul>
+    <li>Putere: 200 kW</li>
+    <li>Baterie: 69 kWh</li>
+    <li>Autonomie: 410 km WLTP</li>
+    <li>Consum mediu: 16.5 kWh/100km</li>
+  </ul>
+</div>
+
 
       <!-- AUDI -->
       <div class="car-card">
