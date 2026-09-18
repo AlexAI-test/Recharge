@@ -152,17 +152,19 @@ body {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: black;
+  background: rgba(0, 0, 0, 0.35); /* transparent black */
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-size: 16px;
+  backdrop-filter: blur(4px); /* optional: glass effect */
   transition: 0.3s;
 }
 
 .back-button:hover {
-  background: #333;
+  background: rgba(0, 0, 0, 0.55);
   transform: scale(1.05);
 }
+
 
 
