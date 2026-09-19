@@ -213,3 +213,53 @@ body {
   padding: 10px 0;
 }
 
+/* --- CARDURI ZILE --- */
+
+.tour-days-menu {
+  margin-top: 40px;
+  background: #fff8d1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.day-card {
+  background: #ffe680;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-card:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE ZILE --- */
+
+.day-section {
+  display: none;
+  margin-top: 30px;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.day-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
