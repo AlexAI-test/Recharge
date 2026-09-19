@@ -212,3 +212,76 @@ body {
 .spec-table .row {
   padding: 10px 0;
 }
+
+/* --- DAYS PANEL (dreapta) --- */
+.days-panel {
+  position: fixed;
+  right: 20px;
+  top: 120px;
+  width: 220px;
+  background: #fff8d1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.days-panel h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.day-button {
+  background: #ffe680;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-button:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE --- */
+.infographics-section {
+  margin-top: 40px;
+}
+
+.infographics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.infographics-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* --- FULLSCREEN IMAGE --- */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.fullscreen img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
