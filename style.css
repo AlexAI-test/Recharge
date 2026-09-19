@@ -212,3 +212,34 @@ body {
 .spec-table .row {
   padding: 10px 0;
 }
+
+
+.details-days-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tour-days {
+  background: #f7d64a;
+  padding: 16px;
+  border-radius: 12px;
+  color: white;
+}
+
+.day-tours-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.day-tours-bar button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
