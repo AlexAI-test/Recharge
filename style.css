@@ -244,3 +244,52 @@ body {
   cursor: pointer;
 }
 
+/* GRID DETALII + TOUR DAYS */
+.details-days-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  margin-top: 0;            /* IMPORTANT: nu mai împinge wrapper-ul în jos */
+  padding-top: 20px;        /* puțin spațiu, arată mai bine */
+}
+
+/* Coloana cu Tour Days */
+.tour-days {
+  background: #f7d64a;
+  padding: 16px;
+  border-radius: 12px;
+  color: white;
+  position: sticky;         /* IMPORTANT */
+  top: 20px;                /* Tour Days rămâne fix în dreapta */
+}
+
+/* Butoane Tour Days */
+.day-tours-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.day-tours-bar button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Detalii tehnice */
+.details-column {
+  padding-right: 20px;
+}
+
+.details-section {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+}
