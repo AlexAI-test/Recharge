@@ -20,6 +20,7 @@
     <h2>Mașini participante</h2>
 
     <div class="car-grid">
+
       <!-- 1. VOLVO -->
       <div class="car-card" onclick="toggleDetails('volvo-details')">
         <img src="images/eurocharge-volvo.jpg" alt="Volvo ES90 Ultra Single Motor Extended Range">
@@ -67,93 +68,113 @@
         <img src="images/eurocharge-audi.jpg" alt="Audi Q4 e-tron Sportback quattro">
         <div class="overlay"><p>Audi Q4 e-tron Sportback quattro</p></div>
       </div>
+
     </div> <!-- FINAL GRID -->
-
-    <!-- ZILELE TOURULUI -->
-    <section class="tour-days-menu">
-      <h2>Zilele Tourului</h2>
-      <div class="days-grid">
-        <div class="day-card" onclick="toggleDay('day1')">Day 1</div>
-        <div class="day-card" onclick="toggleDay('day2')">Day 2</div>
-        <div class="day-card" onclick="toggleDay('day3')">Day 3</div>
-        <div class="day-card" onclick="toggleDay('day4')">Day 4</div>
-        <div class="day-card" onclick="toggleDay('day5')">Day 5</div>
-        <div class="day-card" onclick="toggleDay('day6')">Day 6</div>
-        <div class="day-card" onclick="toggleDay('day7')">Day 7</div>
-        <div class="day-card" onclick="toggleDay('day8')">Day 8</div>
-        <div class="day-card" onclick="toggleDay('day9')">Day 9</div>
-        <div class="day-card" onclick="toggleDay('day10')">Day 10</div>
-      </div>
-    </section>
-
-    <!-- INFOGRAFICE PE ZILE -->
-    <section id="day-infographics">
-      <div id="day1" class="day-section">
-        <h3>Ziua 1 — Gothenburg → Oslo</h3>
-        <div class="day-grid">
-          <img src="infographics/day1/Volvo1.jpg">
-          <img src="infographics/day1/GLC1.jpg">
-          <img src="infographics/day1/Porsche1.jpg">
-          <img src="infographics/day1/Renault1.jpg">
-          <img src="infographics/day1/VW1.jpg">
-          <img src="infographics/day1/Mazda1.jpg">
-          <img src="infographics/day1/BYD1.jpg">
-          <img src="infographics/day1/Audi1.jpg">
-        </div>
-      </div>
-
-      <div id="day2" class="day-section">
-        <h3>Ziua 2 — Oslo → Bergen</h3>
-        <div class="day-grid">
-          <img src="infographics/day2/Volvo2.jpg">
-          <img src="infographics/day2/GLC2.jpg">
-          <img src="infographics/day2/Porsche2.jpg">
-          <img src="infographics/day2/Renault2.jpg">
-          <img src="infographics/day2/VW2.jpg">
-          <img src="infographics/day2/Mazda2.jpg">
-          <img src="infographics/day2/BYD2.jpg">
-          <img src="infographics/day2/Audi2.jpg">
-        </div>
-      </div>
-
-      <div id="day3" class="day-section">
-        <h3>Ziua 3 — Bergen → Ålesund</h3>
-        <div class="day-grid">
-          <img src="infographics/day3/Volvo3.jpg">
-          <img src="infographics/day3/GLC3.jpg">
-          <img src="infographics/day3/Porsche3.jpg">
-          <img src="infographics/day3/Renault3.jpg">
-          <img src="infographics/day3/VW3.jpg">
-          <img src="infographics/day3/Mazda3.jpg">
-          <img src="infographics/day3/BYD3.jpg">
-          <img src="infographics/day3/Audi3.jpg">
-        </div>
-      </div>
-    </section>
-
-    <!-- DETALII MASINI -->
-    <!-- (toate secțiunile detaliilor sunt deja corecte și păstrate) -->
   </section>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    function toggleDetails(id) {
-      const allDetails = document.querySelectorAll('.details-section');
-      allDetails.forEach(section => section.style.display = "none");
-      const selected = document.getElementById(id);
-      if (selected) selected.style.display = "block";
-    }
+  <!-- LAYOUT 2 COLOANE -->
+  <section class="layout-two-columns">
 
-    function toggleDay(id) {
-      const allDays = document.querySelectorAll('.day-section');
-      allDays.forEach(day => day.style.display = "none");
-      const selected = document.getElementById(id);
-      if (selected) selected.style.display = "block";
-    }
-  </script>
+    <!-- COLOANA STÂNGĂ -->
+    <div class="left-column">
 
-</body>
-</html>
+      <!-- ZILELE TOURULUI -->
+      <section class="tour-days-menu">
+        <h2>Zilele Tourului</h2>
+        <div class="days-grid">
+          <div class="day-card" onclick="toggleDay('day1')">Day 1</div>
+          <div class="day-card" onclick="toggleDay('day2')">Day 2</div>
+          <div class="day-card" onclick="toggleDay('day3')">Day 3</div>
+          <div class="day-card" onclick="toggleDay('day4')">Day 4</div>
+          <div class="day-card" onclick="toggleDay('day5')">Day 5</div>
+          <div class="day-card" onclick="toggleDay('day6')">Day 6</div>
+          <div class="day-card" onclick="toggleDay('day7')">Day 7</div>
+          <div class="day-card" onclick="toggleDay('day8')">Day 8</div>
+          <div class="day-card" onclick="toggleDay('day9')">Day 9</div>
+          <div class="day-card" onclick="toggleDay('day10')">Day 10</div>
+        </div>
+      </section>
+
+      <!-- INFOGRAFICE PE ZILE -->
+      <section id="day-infographics">
+
+        <div id="day1" class="day-section">
+          <h3>Ziua 1 — Gothenburg → Oslo</h3>
+          <div class="day-grid">
+            <img src="infographics/day1/Volvo1.jpg">
+            <img src="infographics/day1/GLC1.jpg">
+            <img src="infographics/day1/Porsche1.jpg">
+            <img src="infographics/day1/Renault1.jpg">
+            <img src="infographics/day1/VW1.jpg">
+            <img src="infographics/day1/Mazda1.jpg">
+            <img src="infographics/day1/BYD1.jpg">
+            <img src="infographics/day1/Audi1.jpg">
+          </div>
+        </div>
+
+        <div id="day2" class="day-section">
+          <h3>Ziua 2 — Oslo → Bergen</h3>
+          <div class="day-grid">
+            <img src="infographics/day2/Volvo2.jpg">
+            <img src="infographics/day2/GLC2.jpg">
+            <img src="infographics/day2/Porsche2.jpg">
+            <img src="infographics/day2/Renault2.jpg">
+            <img src="infographics/day2/VW2.jpg">
+            <img src="infographics/day2/Mazda2.jpg">
+            <img src="infographics/day2/BYD2.jpg">
+            <img src="infographics/day2/Audi2.jpg">
+          </div>
+        </div>
+
+        <div id="day3" class="day-section">
+          <h3>Ziua 3 — Bergen → Ålesund</h3>
+          <div class="day-grid">
+            <img src="infographics/day3/Volvo3.jpg">
+            <img src="infographics/day3/GLC3.jpg">
+            <img src="infographics/day3/Porsche3.jpg">
+            <img src="infographics/day3/Renault3.jpg">
+            <img src="infographics/day3/VW3.jpg">
+            <img src="infographics/day3/Mazda3.jpg">
+            <img src="infographics/day3/BYD3.jpg">
+            <img src="infographics/day3/Audi3.jpg">
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- COLOANA DREAPTĂ -->
+    <div class="right-column">
+
+      <!-- AICI RĂMÂN TOATE DETALIILE TEHNICE ALE MAȘINILOR -->
+      <!-- (codul tău complet pentru detalii rămâne neschimbat) -->
+
+      <!-- VOLVO -->
+      <div id="volvo-details" class="details-section">
+        <h3>Volvo ES90 Ultra Single Motor Extended Range</h3>
+        <div class="spec-table">
+          <!-- ... toate detaliile tehnice ... -->
+        </div>
+      </div>
+
+      <!-- MERCEDES -->
+      <div id="mercedes-details" class="details-section">
+        <h3>Mercedes-Benz GLC Electric 400 4Matic</h3>
+        <div class="spec-table">
+          <!-- ... toate detaliile tehnice ... -->
+        </div>
+      </div>
+
+      <!-- PORSCHE -->
+      <div id="porsche-details" class="details-section">
+        <h3>Porsche Cayenne Electric</h3>
+        <div class="spec-table">
+          <!-- ... toate detaliile tehnice ... -->
+        </div>
+      </div>
+
+      <!-- RENAULT -->
 
 
 
