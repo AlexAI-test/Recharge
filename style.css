@@ -327,4 +327,102 @@ body {
   border-radius: 8px;
 }
 
+/* --- LAYOUT 2 COLOANE --- */
+.layout-two-columns {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* --- COLOANA STÂNGĂ --- */
+.left-column {
+  background: #fff8d1;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* --- COLOANA DREAPTĂ --- */
+.right-column {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* --- CARDURI ZILE --- */
+.tour-days-menu {
+  margin-bottom: 20px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.day-card {
+  background: #ffe680;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-card:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE --- */
+.day-section {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.day-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* --- DETALII TEHNICE --- */
+.details-section {
+  display: none;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.spec-table {
+  display: grid;
+  gap: 10px;
+}
+
+.spec-category {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.value.highlight {
+  color: #0077ff;
+  font-weight: bold;
+}
+
 
