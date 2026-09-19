@@ -548,3 +548,94 @@ body {
   font-weight: 700;
 }
 
+/* --- DETALII TEHNICE --- */
+.details-section {
+  display: none;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.spec-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.spec-category {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 25px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+
+.value {
+  font-weight: 500;
+  color: #444;
+}
+
+.value.highlight {
+  color: #0077ff;
+  font-weight: 700;
+}
+
+/* --- ZILE TOUR --- */
+.tour-days-menu {
+  margin-top: 40px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.day-card {
+  background: #ffe680;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-card:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE --- */
+.day-section {
+  display: none;
+  margin-top: 20px;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.day-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
