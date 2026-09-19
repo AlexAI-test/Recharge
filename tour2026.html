@@ -88,6 +88,71 @@
 
     </div> <!-- FINAL GRID -->
 
+
+    <!-- DAYS PANEL (dreapta) -->
+<div class="days-panel">
+  <h3>Zilele Tourului</h3>
+  <div class="day-button" onclick="showDay(1)">Day 1</div>
+  <div class="day-button" onclick="showDay(2)">Day 2</div>
+  <div class="day-button" onclick="showDay(3)">Day 3</div>
+</div>
+
+<!-- INFOGRAFICE -->
+<section id="infographics" class="infographics-section">
+
+  <!-- Ziua 1 -->
+  <div id="day-1" class="day-infographics" style="display:none;">
+    <h3>Ziua 1 — Gothenburg → Oslo</h3>
+    <div class="infographics-grid">
+      <img src="infographics/day1/Volvo1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/GLC1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/Porsche1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/Renault1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/VW1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/Mazda1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/BYD1.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day1/Audi1.jpg" onclick="openFullscreen(this.src)">
+    </div>
+  </div>
+
+  <!-- Ziua 2 -->
+  <div id="day-2" class="day-infographics" style="display:none;">
+    <h3>Ziua 2 — Oslo → Bergen</h3>
+    <div class="infographics-grid">
+      <img src="infographics/day2/Volvo2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/GLC2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/Porsche2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/Renault2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/VW2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/Mazda2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/BYD2.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day2/Audi2.jpg" onclick="openFullscreen(this.src)">
+    </div>
+  </div>
+
+  <!-- Ziua 3 -->
+  <div id="day-3" class="day-infographics" style="display:none;">
+    <h3>Ziua 3 — Bergen → Ålesund</h3>
+    <div class="infographics-grid">
+      <img src="infographics/day3/Volvo3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/GLC3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/Porsche3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/Renault3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/VW3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/Mazda3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/BYD3.jpg" onclick="openFullscreen(this.src)">
+      <img src="infographics/day3/Audi3.jpg" onclick="openFullscreen(this.src)">
+    </div>
+  </div>
+
+</section>
+
+<!-- FULLSCREEN VIEW -->
+<div id="fullscreen-view" class="fullscreen" style="display:none;" onclick="closeFullscreen()">
+  <img id="fullscreen-img">
+</div>
+
+    
     <!-- DETALII MASINI -->
 
     <!-- VOLVO -->
@@ -657,6 +722,23 @@
       }
     }
   </script>
+
+  <script>
+function showDay(dayNumber) {
+  document.querySelectorAll('.day-infographics').forEach(el => el.style.display = 'none');
+  document.getElementById(`day-${dayNumber}`).style.display = 'block';
+}
+
+function openFullscreen(src) {
+  document.getElementById('fullscreen-img').src = src;
+  document.getElementById('fullscreen-view').style.display = 'flex';
+}
+
+function closeFullscreen() {
+  document.getElementById('fullscreen-view').style.display = 'none';
+}
+</script>
+
 
 </body>
 </html>
