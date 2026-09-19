@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Recharge — Tour 2026</title>
@@ -12,6 +12,7 @@
   <section class="hero">
     <h1>Recharge Tour 2026</h1>
     <p>Electric Road Trip • 11 days • 4500 km</p>
+
     <a href="index.html" class="back-button">← Back to main page</a>
   </section>
 
@@ -21,129 +22,688 @@
 
     <div class="car-grid">
 
+      <!-- 1. VOLVO -->
       <div class="car-card" onclick="toggleDetails('volvo-details')">
-        <img src="images/eurocharge-volvo.jpg">
-        <div class="overlay"><p>Volvo ES90 Ultra Single Motor Extended Range</p></div>
+        <img src="images/eurocharge-volvo.jpg" alt="Volvo ES90 Ultra Single Motor Extended Range">
+        <div class="overlay">
+          <p>Volvo ES90 Ultra Single Motor Extended Range</p>
+        </div>
       </div>
 
+      <!-- 2. MERCEDES -->
       <div class="car-card" onclick="toggleDetails('mercedes-details')">
-        <img src="images/eurocharge-mercedes.jpg">
-        <div class="overlay"><p>Mercedes-Benz GLC Electric 400 4Matic</p></div>
+        <img src="images/eurocharge-mercedes.jpg" alt="Mercedes-Benz GLC Electric 400 4Matic">
+        <div class="overlay">
+          <p>Mercedes-Benz GLC Electric 400 4Matic</p>
+        </div>
       </div>
 
+      <!-- 3. PORSCHE -->
       <div class="car-card" onclick="toggleDetails('porsche-details')">
-        <img src="images/eurocharge-porsche.jpg">
-        <div class="overlay"><p>Porsche Cayenne Electric</p></div>
+        <img src="images/eurocharge-porsche.jpg" alt="Porsche Cayenne Electric">
+        <div class="overlay">
+          <p>Porsche Cayenne Electric</p>
+        </div>
       </div>
 
+      <!-- 4. RENAULT -->
       <div class="car-card" onclick="toggleDetails('renault-details')">
-        <img src="images/eurocharge-renault.jpg">
-        <div class="overlay"><p>Renault 5 Roland-Garros</p></div>
+        <img src="images/eurocharge-renault.jpg" alt="Renault 5 Roland-Garros">
+        <div class="overlay">
+          <p>Renault 5 Roland-Garros</p>
+        </div>
       </div>
 
+      <!-- 5. VOLKSWAGEN -->
       <div class="car-card" onclick="toggleDetails('vw-details')">
-        <img src="images/eurocharge-volkwagen.jpg">
-        <div class="overlay"><p>Volkswagen ID.Polo 52kWH Style</p></div>
+        <img src="images/eurocharge-volkwagen.jpg" alt="Volkswagen ID.Polo 52kWH Style">
+        <div class="overlay">
+          <p>Volkswagen ID.Polo 52kWH Style</p>
+        </div>
       </div>
 
+      <!-- 6. MAZDA -->
       <div class="car-card" onclick="toggleDetails('mazda-details')">
-        <img src="images/eurocharge-mazda.jpg">
-        <div class="overlay"><p>Mazda CX-6e Takumi Plus</p></div>
+        <img src="images/eurocharge-mazda.jpg" alt="Mazda CX-6e Takumi Plus">
+        <div class="overlay">
+          <p>Mazda CX-6e Takumi Plus</p>
+        </div>
       </div>
 
+      <!-- 7. BYD -->
       <div class="car-card" onclick="toggleDetails('byd-details')">
-        <img src="images/eurocharge-byd.jpg">
-        <div class="overlay"><p>BYD Sealion 7 Design AWD</p></div>
+        <img src="images/eurocharge-byd.jpg" alt="BYD Sealion 7 Design AWD">
+        <div class="overlay">
+          <p>BYD Sealion 7 Design AWD</p>
+        </div>
       </div>
 
+      <!-- 8. AUDI -->
       <div class="car-card" onclick="toggleDetails('audi-details')">
-        <img src="images/eurocharge-audi.jpg">
-        <div class="overlay"><p>Audi Q4 e-tron Sportback quattro</p></div>
+        <img src="images/eurocharge-audi.jpg" alt="Audi Q4 e-tron Sportback quattro">
+        <div class="overlay">
+          <p>Audi Q4 e-tron Sportback quattro</p>
+        </div>
       </div>
 
+    </div> <!-- FINAL GRID -->
+
+    <!-- ZILE TOUR -->
+    <section class="tour-days-menu">
+      <h2>Zilele Tourului</h2>
+
+      <div class="days-grid">
+        <div class="day-card" onclick="toggleDay('day1')">Day 1</div>
+        <div class="day-card" onclick="toggleDay('day2')">Day 2</div>
+        <div class="day-card" onclick="toggleDay('day3')">Day 3</div>
+        <div class="day-card" onclick="toggleDay('day4')">Day 4</div>
+        <div class="day-card" onclick="toggleDay('day5')">Day 5</div>
+        <div class="day-card" onclick="toggleDay('day6')">Day 6</div>
+        <div class="day-card" onclick="toggleDay('day7')">Day 7</div>
+        <div class="day-card" onclick="toggleDay('day8')">Day 8</div>
+        <div class="day-card" onclick="toggleDay('day9')">Day 9</div>
+        <div class="day-card" onclick="toggleDay('day10')">Day 10</div>
+      </div>
+    </section>
+
+    <!-- INFOGRAFICE PE ZILE -->
+    <section id="day-infographics">
+
+      <div id="day1" class="day-section">
+        <h3>Ziua 1 — Gothenburg → Oslo</h3>
+        <div class="day-grid">
+          <img src="infographics/day1/Volvo1.jpg">
+          <img src="infographics/day1/GLC1.jpg">
+          <img src="infographics/day1/Porsche1.jpg">
+          <img src="infographics/day1/Renault1.jpg">
+          <img src="infographics/day1/VW1.jpg">
+          <img src="infographics/day1/Mazda1.jpg">
+          <img src="infographics/day1/BYD1.jpg">
+          <img src="infographics/day1/Audi1.jpg">
+        </div>
+      </div>
+
+      <div id="day2" class="day-section">
+        <h3>Ziua 2 — Oslo → Bergen</h3>
+        <div class="day-grid">
+          <img src="infographics/day2/Volvo2.jpg">
+          <img src="infographics/day2/GLC2.jpg">
+          <img src="infographics/day2/Porsche2.jpg">
+          <img src="infographics/day2/Renault2.jpg">
+          <img src="infographics/day2/VW2.jpg">
+          <img src="infographics/day2/Mazda2.jpg">
+          <img src="infographics/day2/BYD2.jpg">
+          <img src="infographics/day2/Audi2.jpg">
+        </div>
+      </div>
+
+      <div id="day3" class="day-section">
+        <h3>Ziua 3 — Bergen → Ålesund</h3>
+        <div class="day-grid">
+          <img src="infographics/day3/Volvo3.jpg">
+          <img src="infographics/day3/GLC3.jpg">
+          <img src="infographics/day3/Porsche3.jpg">
+          <img src="infographics/day3/Renault3.jpg">
+          <img src="infographics/day3/VW3.jpg">
+          <img src="infographics/day3/Mazda3.jpg">
+          <img src="infographics/day3/BYD3.jpg">
+          <img src="infographics/day3/Audi3.jpg">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- DETALII MASINI -->
+
+    <!-- VOLVO -->
+    <div id="volvo-details" class="details-section">
+      <h3>Volvo ES90 Ultra Single Motor Extended Range</h3>
+      <div class="spec-table">
+
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">333 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">480 Nm</span></div>
+
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">Rear-wheel drive (RWD)</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">1</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">333 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">480 Nm</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">92.00 kWh</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">6.6 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">180 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">15.8 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">654 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">5000 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1942 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1549 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">3102 mm</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1445 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">2410 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">Not tested</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€83,800</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€102,381</span></div>
+
+      </div>
     </div>
-  </section>
 
-  <!-- LAYOUT 2 COLOANE -->
-  <section class="layout-two-columns">
+    <!-- MERCEDES -->
+    <div id="mercedes-details" class="details-section">
+      <h3>Mercedes-Benz GLC Electric 400 4Matic</h3>
+      <div class="spec-table">
 
-    <!-- COLOANA STÂNGĂ -->
-    <div class="left-column">
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">489 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">800 Nm</span></div>
 
-      <!-- ZILELE TOURULUI -->
-      <section class="tour-days-menu">
-        <h2>Zilele Tourului</h2>
-        <div class="days-grid">
-          <div class="day-card" onclick="toggleDay('day1')">Day 1</div>
-          <div class="day-card" onclick="toggleDay('day2')">Day 2</div>
-          <div class="day-card" onclick="toggleDay('day3')">Day 3</div>
-          <div class="day-card" onclick="toggleDay('day4')">Day 4</div>
-          <div class="day-card" onclick="toggleDay('day5')">Day 5</div>
-          <div class="day-card" onclick="toggleDay('day6')">Day 6</div>
-          <div class="day-card" onclick="toggleDay('day7')">Day 7</div>
-          <div class="day-card" onclick="toggleDay('day8')">Day 8</div>
-          <div class="day-card" onclick="toggleDay('day9')">Day 9</div>
-          <div class="day-card" onclick="toggleDay('day10')">Day 10</div>
-        </div>
-      </section>
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">2</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">All-wheel drive (AWD)</span></div>
 
-      <!-- INFOGRAFICE PE ZILE -->
-      <section id="day-infographics">
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
 
-        <div id="day1" class="day-section">
-          <h3>Ziua 1 — Gothenburg → Oslo</h3>
-          <div class="day-grid">
-            <img src="infographics/day1/Volvo1.jpg">
-            <img src="infographics/day1/GLC1.jpg">
-            <img src="infographics/day1/Porsche1.jpg">
-            <img src="infographics/day1/Renault1.jpg">
-            <img src="infographics/day1/VW1.jpg">
-            <img src="infographics/day1/Mazda1.jpg">
-            <img src="infographics/day1/BYD1.jpg">
-            <img src="infographics/day1/Audi1.jpg">
-          </div>
-        </div>
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">2</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">489 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">800 Nm</span></div>
 
-        <div id="day2" class="day-section">
-          <h3>Ziua 2 — Oslo → Bergen</h3>
-          <div class="day-grid">
-            <img src="infographics/day2/Volvo2.jpg">
-            <img src="infographics/day2/GLC2.jpg">
-            <img src="infographics/day2/Porsche2.jpg">
-            <img src="infographics/day2/Renault2.jpg">
-            <img src="infographics/day2/VW2.jpg">
-            <img src="infographics/day2/Mazda2.jpg">
-            <img src="infographics/day2/BYD2.jpg">
-            <img src="infographics/day2/Audi2.jpg">
-          </div>
-        </div>
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">–</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
 
-        <div id="day3" class="day-section">
-          <h3>Ziua 3 — Bergen → Ålesund</h3>
-          <div class="day-grid">
-            <img src="infographics/day3/Volvo3.jpg">
-            <img src="infographics/day3/GLC3.jpg">
-            <img src="infographics/day3/Porsche3.jpg">
-            <img src="infographics/day3/Renault3.jpg">
-            <img src="infographics/day3/VW3.jpg">
-            <img src="infographics/day3/Mazda3.jpg">
-            <img src="infographics/day3/BYD3.jpg">
-            <img src="infographics/day3/Audi3.jpg">
-          </div>
-        </div>
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">4.3 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">210 km/h</span></div>
 
-      </section>
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">15.8 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">673 km</span></div>
 
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">4845 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1913 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1644 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">2972 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">570 liters</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1740 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">2535 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">Not tested</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€67,760</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€90,569</span></div>
+
+      </div>
     </div>
 
-    <!-- COLOANA DREAPTĂ -->
-    <div class="right-column">
+    <!-- PORSCHE -->
+    <div id="porsche-details" class="details-section">
+      <h3>Porsche Cayenne Electric</h3>
+      <div class="spec-table">
 
-      <!-- DETALII TEHNICE -->
-      <!-- Aici inserezi TOATE detaliile tehnice EXACT cum le aveai -->
-      <!-- Nu le rescriu aici pentru că sunt foarte lungi -->
-      <!-- Dar le copiezi 1:1 din fișierul tău original -->
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">442 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">835 Nm</span></div>
 
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">All-wheel drive (AWD)</span></div>
+
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">2</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">442 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">835 Nm</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">113.00 kWh</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">4.8 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">230 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">19.7 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">643 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">4985 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1980 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1735 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">3023 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">781 liters</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1588 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">2600 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">5 stars</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€108,281</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€128,500</span></div>
+
+      </div>
+    </div>
+
+    <!-- RENAULT -->
+    <div id="renault-details" class="details-section">
+      <h3>Renault 5 Roland-Garros</h3>
+      <div class="spec-table">
+
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">150 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">245 Nm</span></div>
+
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">Front-wheel drive (FWD)</span></div>
+
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">1</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">150 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">245 Nm</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">52.00 kWh</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">8.0 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">150 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">15.1 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">411 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">3922 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1774 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1498 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">2541 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">277 liters</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1057 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">1449 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">4 stars</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€34,200</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€34,200</span></div>
+
+      </div>
+    </div>
+
+    <!-- VOLKSWAGEN -->
+    <div id="vw-details" class="details-section">
+      <h3>Volkswagen ID.Polo 52kWH Style</h3>
+      <div class="spec-table">
+
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">211 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">–</span></div>
+
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">Front-wheel drive (FWD)</span></div>
+
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">1</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">211 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">–</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">55.00 kWh</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">7.1 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">160 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">13.4 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">451 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">4053 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1816 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1530 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">2592 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">441 liters</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1240 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">1599 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">Not tested</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€38,591</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€39,502</span></div>
+
+      </div>
+    </div>
+
+    <!-- MAZDA -->
+    <div id="mazda-details" class="details-section">
+      <h3>Mazda CX-6e Takumi Plus</h3>
+      <div class="spec-table">
+
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">258 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">290 Nm</span></div>
+
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">Rear-wheel drive (RWD)</span></div>
+
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">1</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">258 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">290 Nm</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">78.00 kWh</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">7.9 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">185 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">19.4 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">468 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">4850 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1620 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">2902 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">363 liters</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1434 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">2230 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">Not tested</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€48,850</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€49,750</span></div>
+
+      </div>
+    </div>
+
+    <!-- BYD -->
+    <div id="byd-details" class="details-section">
+      <h3>BYD Sealion 7 Design AWD</h3>
+      <div class="spec-table">
+
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">530 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">690 Nm</span></div>
+
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">All-wheel drive (AWD)</span></div>
+
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">2</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">530 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">690 Nm</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">–</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">4.5 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">215 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">21.4 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">456 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">4830 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1925 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1620 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">2930 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">520 liters</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">1789 liters</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">2340 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">5 stars</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€49,800</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€50,900</span></div>
+
+      </div>
+    </div>
+
+    <!-- AUDI -->
+    <div id="audi-details" class="details-section">
+      <h3>Audi Q4 e-tron Sportback quattro</h3>
+      <div class="spec-table">
+
+        <!-- PROPULSION SYSTEM -->
+        <div class="spec-category">Propulsion System</div>
+        <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+        <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+        <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum system power</span><span class="value highlight">299 hp</span></div>
+        <div class="row"><span class="label">Maximum system torque</span><span class="value">–</span></div>
+
+        <!-- TRANSMISSION -->
+        <div class="spec-category">Transmission</div>
+        <div class="row"><span class="label">Transmission type</span><span class="value">Automatic</span></div>
+        <div class="row"><span class="label">Number of gears</span><span class="value">1 (single-speed)</span></div>
+        <div class="row"><span class="label">Drivetrain</span><span class="value">All-wheel drive (AWD)</span></div>
+
+        <!-- INTERNAL COMBUSTION ENGINE -->
+        <div class="spec-category">Internal Combustion Engine</div>
+        <div class="row"><span class="label">ICE configuration</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Displacement</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE power</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Maximum ICE torque</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Turbocharging systems</span><span class="value">–</span></div>
+
+        <!-- ELECTRIC MOTOR -->
+        <div class="spec-category">Electric Motor</div>
+        <div class="row"><span class="label">Electric motor count</span><span class="value">2</span></div>
+        <div class="row"><span class="label">Maximum electric power</span><span class="value highlight">299 hp</span></div>
+        <div class="row"><span class="label">Maximum electric torque</span><span class="value">–</span></div>
+
+        <!-- BATTERY -->
+        <div class="spec-category">Battery</div>
+        <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">82.00 kWh</span></div>
+        <div class="row"><span class="label">Max AC charging power</span><span class="value">11.0 kW</span></div>
+
+        <!-- PERFORMANCE -->
+        <div class="spec-category">Performance</div>
+        <div class="row"><span class="label">0–100 km/h</span><span class="value">6.2 s</span></div>
+        <div class="row"><span class="label">Top speed</span><span class="value">180 km/h</span></div>
+
+        <!-- CONSUMPTION -->
+        <div class="spec-category">Consumption</div>
+        <div class="row"><span class="label">Electric consumption (WLTP)</span><span class="value">16.1 kWh/100 km</span></div>
+        <div class="row"><span class="label">Electric range (WLTP)</span><span class="value highlight">557 km</span></div>
+
+        <!-- DIMENSIONS -->
+        <div class="spec-category">Dimensions</div>
+        <div class="row"><span class="label">Length</span><span class="value">4603 mm</span></div>
+        <div class="row"><span class="label">Width (w/wo mirrors)</span><span class="value">1865 mm</span></div>
+        <div class="row"><span class="label">Height</span><span class="value">1600 mm</span></div>
+        <div class="row"><span class="label">Wheelbase</span><span class="value">2771 mm</span></div>
+        <div class="row"><span class="label">Trunk volume</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Trunk volume (row 2 folded)</span><span class="value">–</span></div>
+        <div class="row"><span class="label">Curb weight</span><span class="value">2245 kg</span></div>
+
+        <!-- SAFETY -->
+        <div class="spec-category">Safety</div>
+        <div class="row"><span class="label">Safety rating</span><span class="value">5 stars</span></div>
+
+        <!-- PRICE -->
+        <div class="spec-category">Price</div>
+        <div class="row"><span class="label">Starting price</span><span class="value">€63,996</span></div>
+        <div class="row"><span class="label">Tested vehicle price</span><span class="value">€75,510</span></div>
+
+      </div>
     </div>
 
   </section>
@@ -152,21 +712,29 @@
   <script>
     function toggleDetails(id) {
       const allDetails = document.querySelectorAll('.details-section');
-      allDetails.forEach(section => section.style.display = "none");
-      const selected = document.getElementById(id);
-      if (selected) selected.style.display = "block";
-    }
+      allDetails.forEach(section => {
+        section.style.display = "none";
+      });
 
+      const selected = document.getElementById(id);
+      if (selected) {
+        selected.style.display = "block";
+      }
+    }
+  </script>
+  <script>
     function toggleDay(id) {
       const allDays = document.querySelectorAll('.day-section');
       allDays.forEach(day => day.style.display = "none");
+
       const selected = document.getElementById(id);
-      if (selected) selected.style.display = "block";
+      selected.style.display = "block";
     }
   </script>
 
 </body>
 </html>
+
 
 
 
