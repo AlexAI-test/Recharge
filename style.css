@@ -425,4 +425,80 @@ body {
   font-weight: bold;
 }
 
+/* --- DETALII TEHNICE --- */
+.details-section {
+  display: none;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.spec-table {
+  display: grid;
+  gap: 10px;
+}
+
+.spec-category {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.value.highlight {
+  color: #0077ff;
+  font-weight: bold;
+}
+
+/* --- ZILE TOUR --- */
+.tour-days-menu {
+  margin-top: 40px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.day-card {
+  background: #ffe680;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-card:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE --- */
+.day-section {
+  display: none;
+  margin-top: 20px;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.day-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
 
