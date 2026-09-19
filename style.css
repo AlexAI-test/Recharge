@@ -285,3 +285,62 @@ body {
   border-radius: 12px;
 }
 
+/* --- PANEL ZILE (dreapta, sub pozele cu masini) --- */
+.days-panel {
+  position: fixed;
+  right: 20px;
+  top: 480px; /* AICI îl coborâm sub pozele cu mașini */
+  width: 220px;
+  background: #fff8d1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.days-panel h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.day-button {
+  background: #ffe680;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-button:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE SUB PANEL --- */
+.infographics-section {
+  position: fixed;
+  right: 20px;
+  top: 680px; /* Sub panel */
+  width: 220px;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 900;
+}
+
+.infographics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.infographics-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
