@@ -421,4 +421,58 @@ body {
   max-height: 90%;
   border-radius: 12px;
 }
+/* --- LAYOUT 2 COLOANE --- */
+.details-days-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* --- TOUR DAYS PANEL --- */
+.tour-days {
+  background: #fff8d1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tour-days h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.day-btn {
+  background: #ffe680;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.day-btn:hover {
+  background: #ffd24d;
+  transform: translateY(-3px);
+}
+
+/* --- INFOGRAFICE --- */
+.day-infographics {
+  display: none;
+  margin-top: 20px;
+}
+
+.infographics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.infographics-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
