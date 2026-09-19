@@ -88,6 +88,70 @@
 
     </div> <!-- FINAL GRID -->
 
+    <section class="tour-days-menu">
+  <h2>Zilele Tourului</h2>
+
+  <div class="days-grid">
+    <div class="day-card" onclick="toggleDay('day1')">Day 1</div>
+    <div class="day-card" onclick="toggleDay('day2')">Day 2</div>
+    <div class="day-card" onclick="toggleDay('day3')">Day 3</div>
+    <div class="day-card" onclick="toggleDay('day4')">Day 4</div>
+    <div class="day-card" onclick="toggleDay('day5')">Day 5</div>
+    <div class="day-card" onclick="toggleDay('day6')">Day 6</div>
+    <div class="day-card" onclick="toggleDay('day7')">Day 7</div>
+    <div class="day-card" onclick="toggleDay('day8')">Day 8</div>
+    <div class="day-card" onclick="toggleDay('day9')">Day 9</div>
+    <div class="day-card" onclick="toggleDay('day10')">Day 10</div>
+  </div>
+</section>
+
+    <section id="day-infographics">
+
+  <div id="day1" class="day-section">
+    <h3>Ziua 1 — Gothenburg → Oslo</h3>
+    <div class="day-grid">
+      <img src="infographics/day1/Volvo1.jpg">
+      <img src="infographics/day1/GLC1.jpg">
+      <img src="infographics/day1/Porsche1.jpg">
+      <img src="infographics/day1/Renault1.jpg">
+      <img src="infographics/day1/VW1.jpg">
+      <img src="infographics/day1/Mazda1.jpg">
+      <img src="infographics/day1/BYD1.jpg">
+      <img src="infographics/day1/Audi1.jpg">
+    </div>
+  </div>
+
+  <div id="day2" class="day-section">
+    <h3>Ziua 2 — Oslo → Bergen</h3>
+    <div class="day-grid">
+      <img src="infographics/day2/Volvo2.jpg">
+      <img src="infographics/day2/GLC2.jpg">
+      <img src="infographics/day2/Porsche2.jpg">
+      <img src="infographics/day2/Renault2.jpg">
+      <img src="infographics/day2/VW2.jpg">
+      <img src="infographics/day2/Mazda2.jpg">
+      <img src="infographics/day2/BYD2.jpg">
+      <img src="infographics/day2/Audi2.jpg">
+    </div>
+  </div>
+
+  <div id="day3" class="day-section">
+    <h3>Ziua 3 — Bergen → Ålesund</h3>
+    <div class="day-grid">
+      <img src="infographics/day3/Volvo3.jpg">
+      <img src="infographics/day3/GLC3.jpg">
+      <img src="infographics/day3/Porsche3.jpg">
+      <img src="infographics/day3/Renault3.jpg">
+      <img src="infographics/day3/VW3.jpg">
+      <img src="infographics/day3/Mazda3.jpg">
+      <img src="infographics/day3/BYD3.jpg">
+      <img src="infographics/day3/Audi3.jpg">
+    </div>
+  </div>
+
+</section>
+
+
     <!-- DETALII MASINI -->
 
     <!-- VOLVO -->
@@ -657,6 +721,16 @@
       }
     }
   </script>
+  <script>
+function toggleDay(id) {
+  const allDays = document.querySelectorAll('.day-section');
+  allDays.forEach(day => day.style.display = "none");
+
+  const selected = document.getElementById(id);
+  selected.style.display = "block";
+}
+</script>
+
 
 </body>
 </html>
