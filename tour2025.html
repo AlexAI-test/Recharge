@@ -1,446 +1,401 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCHARGE Tour 2025</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Recharge — Tour 2025</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <header class="hero-header">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>ROCHARGE TOUR 2025</h1>
-            <p>Descoperă mașinile electrice din turul de anul acesta</p>
-            
-            <div class="car-selector-wrapper">
-                <label for="car-select"><i class="fas fa-car"></i> Alege mașina:</label>
-                <select id="car-select" onchange="changeCar()">
-                    <option value="audi">XXXXXXX (Audi A6 e-tron)</option>
-                    <option value="byd">XXXXXXX (BYD Seal)</option>
-                    <option value="hyundai">XXXXXXX (Hyundai Inster)</option>
-                    <option value="macan">XXXXXXX (Porsche Macan)</option>
-                    <option value="mazda">XXXXXXX (Mazda 6e)</option>
-                    <option value="renault">XXXXXXX (Renault 4)</option>
-                    <option value="vw">XXXXXXX (Volkswagen ID.4)</option>
-                    <option value="volvo">XXXXXXX (Volvo EX90)</option>
-                </select>
-            </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Recharge Tour 2025</h1>
+    <p>Electric Road Trip • 8 days • XXXXXX km</p>
+    <a href="index.html" class="back-button">← Back to main page</a>
+  </section>
+
+  <!-- MASINI PARTICIPANTE -->
+  <section class="cars">
+    <h2>Tested Cars</h2>
+
+    <div class="car-grid">
+
+      <!-- 1. AUDI -->
+      <div class="car-card" onclick="toggleDetails('audi-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
         </div>
-    </header>
+      </div>
 
-    <main class="container">
-        <!-- Car Overview Card -->
-        <section class="car-card">
-            <div class="car-image-container">
-                <img id="car-main-img" src="tour2025/Audi.jpg" alt="Masina Tour 2025">
-            </div>
-            <div class="car-details">
-                <h2 id="car-title">XXXXXXX</h2>
-                <p id="car-subtitle" class="car-subtitle">BEV 100KWH AUTO QUATTRO SPORTBACK</p>
-                <div class="car-price-tag">
-                    <span>Preț de pornire:</span>
-                    <strong id="car-price">77.064 €</strong>
-                </div>
-            </div>
-        </section>
+      <!-- 2. BYD -->
+      <div class="car-card" onclick="toggleDetails('byd-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-        <!-- Technical Specs Table Section -->
-        <section class="specs-section">
-            <h2 class="section-title"><i class="fas fa-cogs"></i> Specificații Tehnice</h2>
-            <div class="table-responsive">
-                <table class="specs-table">
-                    <tbody>
-                        <!-- SISTEM DE PROPULSIE -->
-                        <tr class="table-group-header"><td colspan="2">SISTEM DE PROPULSIE</td></tr>
-                        <tr><td>Tip sistem de propulsie</td><td id="spec-propulsie-tip">Electric (BEV)</td></tr>
-                        <tr><td>Sursă principală energie</td><td id="spec-sursa-p">Electric</td></tr>
-                        <tr><td>Putere maximă sistem</td><td id="spec-putere-sistem">462 CP</td></tr>
-                        <tr><td>Cuplu maxim sistem</td><td id="spec-cuplu-sistem">-</td></tr>
+      <!-- 3. HYUNDAI -->
+      <div class="car-card" onclick="toggleDetails('hyundai-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-                        <!-- TRANSMISIE -->
-                        <tr class="table-group-header"><td colspan="2">TRANSMISIE</td></tr>
-                        <tr><td>Tip transmisie</td><td id="spec-transmisie-tip">automata</td></tr>
-                        <tr><td>Număr trepte</td><td id="spec-trepte">1</td></tr>
-                        <tr><td>Tracțiune</td><td id="spec-traciune">4x4</td></tr>
+      <!-- 4. MACAN -->
+      <div class="car-card" onclick="toggleDetails('macan-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-                        <!-- MOTOR ELECTRIC -->
-                        <tr class="table-group-header"><td colspan="2">MOTOR ELECTRIC</td></tr>
-                        <tr><td>Număr motoare electrice</td><td id="spec-nr-motoare">2</td></tr>
-                        <tr><td>Putere maximă electric</td><td id="spec-putere-el">462 CP</td></tr>
-                        <tr><td>Cuplu maxim electric</td><td id="spec-cuplu-el">-</td></tr>
+      <!-- 5. MAZDA -->
+      <div class="car-card" onclick="toggleDetails('mazda-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-                        <!-- BATERIE -->
-                        <tr class="table-group-header"><td colspan="2">BATERIE</td></tr>
-                        <tr><td>Capacitate brută</td><td id="spec-baterie-cap">100.00 kWh</td></tr>
-                        <tr><td>Putere maximă încărcare AC</td><td id="spec-incarcare-ac">11.0 kW</td></tr>
+      <!-- 6. RENAULT -->
+      <div class="car-card" onclick="toggleDetails('renault-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-                        <!-- PERFORMANȚE -->
-                        <tr class="table-group-header"><td colspan="2">PERFORMANȚE</td></tr>
-                        <tr><td>Accelerație 0-100 km/h</td><td id="spec-accel">4.5 s</td></tr>
-                        <tr><td>Viteză maximă</td><td id="spec-vmax">210 km/h</td></tr>
+      <!-- 7. VW -->
+      <div class="car-card" onclick="toggleDetails('vw-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-                        <!-- CONSUM OFICIAL -->
-                        <tr class="table-group-header"><td colspan="2">CONSUM OFICIAL & AUTONOMIE</td></tr>
-                        <tr><td>Consum energie electrică (WLTP) Mixt</td><td id="spec-consum">14,7 kWh/100 km</td></tr>
-                        <tr><td>Autonomie mod electric (WLTP) Mixt</td><td id="spec-autonomie">719 km</td></tr>
+      <!-- 8. VOLVO -->
+      <div class="car-card" onclick="toggleDetails('volvo-details')">
+        <img src="images/tour2025/XXXXXXX.jpg" alt="XXXXXXX">
+        <div class="overlay">
+          <p>XXXXXXX</p>
+        </div>
+      </div>
 
-                        <!-- DIMENSIUNI ȘI MASE -->
-                        <tr class="table-group-header"><td colspan="2">DIMENSIUNI ȘI MASE</td></tr>
-                        <tr><td>Lungime</td><td id="spec-lungime">4928 mm</td></tr>
-                        <tr><td>Lățime (fără / cu oglinzi)</td><td id="spec-latime">1923 mm</td></tr>
-                        <tr><td>Înălțime</td><td id="spec-inaltime">1486 mm</td></tr>
-                        <tr><td>Ampatament</td><td id="spec-ampatament">2950 mm</td></tr>
-                        <tr><td>Volum portbagaj</td><td id="spec-portbagaj">502 litri</td></tr>
-                        <tr><td>Masa proprie</td><td id="spec-masa">2381 kg</td></tr>
+    </div> <!-- FINAL GRID -->
+  </section>
 
-                        <!-- SIGURANȚĂ ȘI PREȚ -->
-                        <tr class="table-group-header"><td colspan="2">SIGURANȚĂ ȘI PREȚ</td></tr>
-                        <tr><td>Rezultat Siguranță</td><td id="spec-siguranta">5 stele</td></tr>
-                        <tr><td>Preț mașină testată</td><td id="spec-pret-testat">105.895 €</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+  <!-- LAYOUT 2 COLOANE (DETALII TEHNICE + TOUR DAYS) -->
+  <div class="details-days-wrapper">
 
-        <!-- Infographics Section per Day (8 Days) -->
-        <section class="infographics-section">
-            <h2 class="section-title"><i class="fas fa-chart-bar"></i> Infografice pe Zile (Day 1 - Day 8)</h2>
-            
-            <div class="day-tabs">
-                <button class="tab-btn active" onclick="selectDay(1)">Ziua 1</button>
-                <button class="tab-btn" onclick="selectDay(2)">Ziua 2</button>
-                <button class="tab-btn" onclick="selectDay(3)">Ziua 3</button>
-                <button class="tab-btn" onclick="selectDay(4)">Ziua 4</button>
-                <button class="tab-btn" onclick="selectDay(5)">Ziua 5</button>
-                <button class="tab-btn" onclick="selectDay(6)">Ziua 6</button>
-                <button class="tab-btn" onclick="selectDay(7)">Ziua 7</button>
-                <button class="tab-btn" onclick="selectDay(8)">Ziua 8</button>
-            </div>
+    <!-- STÂNGA: DETALII MASINI -->
+    <div class="details-column">
 
-            <div class="infographic-display">
-                <img id="infographic-img" src="info2025/day1/Audi1.png" alt="Infografic Ziua 1">
-            </div>
-        </section>
-    </main>
+      <!-- AUDI -->
+      <div id="audi-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Primary energy source</span><span class="value">Electric</span></div>
+          <div class="row"><span class="label">Secondary energy source</span><span class="value">–</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+          <div class="row"><span class="label">Maximum system torque</span><span class="value">XXXXXX Nm</span></div>
 
-    <script>
-        // Database with technical specifications extracted from 2025 dataset
-        const carsData = {
-            audi: {
-                title: "XXXXXXX",
-                subtitle: "BEV 100KWH AUTO QUATTRO SPORTBACK",
-                image: "tour2025/Audi.jpg",
-                prefix: "Audi",
-                price: "77.064 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "462 CP",
-                cupluSistem: "-",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "4x4",
-                nrMotoare: "2",
-                putereEl: "462 CP",
-                cupluEl: "-",
-                baterieCap: "100.00 kWh",
-                incarcareAC: "11.0 kW",
-                accel: "4.5 s",
-                vmax: "210 km/h",
-                consum: "14,7 kWh/100 km",
-                autonomie: "719 km",
-                lungime: "4928 mm",
-                latime: "1923 mm",
-                inaltime: "1486 mm",
-                ampatament: "2950 mm",
-                portbagaj: "502 litri",
-                masa: "2381 kg",
-                siguranta: "5 stele",
-                pretTestat: "105.895 €"
-            },
-            byd: {
-                title: "XXXXXXX",
-                subtitle: "BEV 83KWH EXCELLENCE AWD",
-                image: "tour2025/BYD.jpg",
-                prefix: "BYD",
-                price: "50.990 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "530 CP",
-                cupluSistem: "670 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "4x4",
-                nrMotoare: "2",
-                putereEl: "530 CP",
-                cupluEl: "670 Nm",
-                baterieCap: "-",
-                incarcareAC: "11.0 kW",
-                accel: "3.8 s",
-                vmax: "180 km/h",
-                consum: "18,2 kWh/100 km",
-                autonomie: "520 km",
-                lungime: "4800 mm",
-                latime: "1875 mm",
-                inaltime: "1460 mm",
-                ampatament: "2920 mm",
-                portbagaj: "400 litri",
-                masa: "2185 kg",
-                siguranta: "5 stele",
-                pretTestat: "N/A"
-            },
-            hyundai: {
-                title: "XXXXXXX",
-                subtitle: "BEV 49KWH LUXURY",
-                image: "tour2025/Hyundai.jpg",
-                prefix: "Hyundai",
-                price: "25.585 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "115 CP",
-                cupluSistem: "147 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "fata",
-                nrMotoare: "1",
-                putereEl: "115 CP",
-                cupluEl: "147 Nm",
-                baterieCap: "49.00 kWh",
-                incarcareAC: "10.5 kW",
-                accel: "10.6 s",
-                vmax: "150 km/h",
-                consum: "15,1 kWh/100 km",
-                autonomie: "360 km",
-                lungime: "3820 mm",
-                latime: "1610 mm",
-                inaltime: "1610 mm",
-                ampatament: "2580 mm",
-                portbagaj: "351 litri",
-                masa: "1379 kg",
-                siguranta: "4 stele",
-                pretTestat: "N/A"
-            },
-            macan: {
-                title: "XXXXXXX",
-                subtitle: "BEV 100KWH 4 AUTO 4WD",
-                image: "tour2025/Macan.jpg",
-                prefix: "Macan",
-                price: "91.298 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "408 CP",
-                cupluSistem: "650 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "4x4",
-                nrMotoare: "2",
-                putereEl: "408 CP",
-                cupluEl: "650 Nm",
-                baterieCap: "100.00 kWh",
-                incarcareAC: "11.0 kW",
-                accel: "5.2 s",
-                vmax: "220 km/h",
-                consum: "17,8 kWh/100 km",
-                autonomie: "611 km",
-                lungime: "4784 mm",
-                latime: "1938 mm",
-                inaltime: "1622 mm",
-                ampatament: "2893 mm",
-                portbagaj: "540 litri",
-                masa: "2405 kg",
-                siguranta: "5 stele",
-                pretTestat: "91.298 €"
-            },
-            mazda: {
-                title: "XXXXXXX",
-                subtitle: "BEV 69KWH TAKUMI PLUS AUTO",
-                image: "tour2025/Mazda.jpg",
-                prefix: "Mazda",
-                price: "46.240 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "258 CP",
-                cupluSistem: "320 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "spate",
-                nrMotoare: "1",
-                putereEl: "258 CP",
-                cupluEl: "320 Nm",
-                baterieCap: "68.80 kWh",
-                incarcareAC: "11.0 kW",
-                accel: "7.6 s",
-                vmax: "175 km/h",
-                consum: "16,6 kWh/100 km",
-                autonomie: "479 km",
-                lungime: "4921 mm",
-                latime: "1890 mm",
-                inaltime: "1491 mm",
-                ampatament: "2895 mm",
-                portbagaj: "337 litri",
-                masa: "1962 kg",
-                siguranta: "5 stele",
-                pretTestat: "46.490 €"
-            },
-            renault: {
-                title: "XXXXXXX",
-                subtitle: "BEV 52KWH 150HP ICONIC COMFORT RANGE",
-                image: "tour2025/Renault.jpg",
-                prefix: "Renault",
-                price: "35.500 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "150 CP",
-                cupluSistem: "245 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "fata",
-                nrMotoare: "1",
-                putereEl: "150 CP",
-                cupluEl: "245 Nm",
-                baterieCap: "52.00 kWh",
-                incarcareAC: "-",
-                accel: "8.2 s",
-                vmax: "150 km/h",
-                consum: "15,6 kWh/100 km",
-                autonomie: "397 km",
-                lungime: "4144 mm",
-                latime: "1808 mm",
-                inaltime: "1572 mm",
-                ampatament: "2624 mm",
-                portbagaj: "375 litri",
-                masa: "1462 kg",
-                siguranta: "4 stele",
-                pretTestat: "35.500 €"
-            },
-            vw: {
-                title: "XXXXXXX",
-                subtitle: "BEV 84KWH 286HP PRO AUTO",
-                image: "tour2025/VW.jpg",
-                prefix: "VW",
-                price: "47.357 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "286 CP",
-                cupluSistem: "545 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "spate",
-                nrMotoare: "1",
-                putereEl: "286 CP",
-                cupluEl: "545 Nm",
-                baterieCap: "84.00 kWh",
-                incarcareAC: "11.0 kW",
-                accel: "6.7 s",
-                vmax: "180 km/h",
-                consum: "15,5 kWh/100 km",
-                autonomie: "566 km",
-                lungime: "4584 mm",
-                latime: "1852 mm",
-                inaltime: "1634 mm",
-                ampatament: "2771 mm",
-                portbagaj: "543 litri",
-                masa: "2160 kg",
-                siguranta: "5 stele",
-                pretTestat: "48.417 €"
-            },
-            volvo: {
-                title: "XXXXXXX",
-                subtitle: "BEV 106KWH TWIN MOTOR PERF ULTRA AT AWD",
-                image: "tour2025/Volvo.jpg",
-                prefix: "Volvo",
-                price: "113.400 €",
-                propulsieTip: "Electric (BEV)",
-                sursaP: "Electric",
-                putereSistem: "680 CP",
-                cupluSistem: "870 Nm",
-                transmisieTip: "automata",
-                trepte: "1",
-                tractiune: "4x4",
-                nrMotoare: "2",
-                putereEl: "680 CP",
-                cupluEl: "870 Nm",
-                baterieCap: "106.00 kWh",
-                incarcareAC: "11.0 kW",
-                accel: "4.2 s",
-                vmax: "180 km/h",
-                consum: "19,8 kWh/100 km",
-                autonomie: "607 km",
-                lungime: "5037 mm",
-                latime: "1964 mm",
-                inaltime: "1747 mm",
-                ampatament: "2985 mm",
-                portbagaj: "384 litri",
-                masa: "2765 kg",
-                siguranta: "5 stele",
-                pretTestat: "113.400 €"
-            }
-        };
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+          <div class="row"><span class="label">Max AC charging power</span><span class="value">XXXXXX kW</span></div>
 
-        let currentCarKey = 'audi';
-        let currentDay = 1;
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+          <div class="row"><span class="label">Tested vehicle price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
 
-        function changeCar() {
-            const select = document.getElementById('car-select');
-            currentCarKey = select.value;
-            const car = carsData[currentCarKey];
+      <!-- BYD -->
+      <div id="byd-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
 
-            // Update UI Details
-            document.getElementById('car-main-img').src = car.image;
-            document.getElementById('car-title').innerText = car.title;
-            document.getElementById('car-subtitle').innerText = car.subtitle;
-            document.getElementById('car-price').innerText = car.price;
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
 
-            // Update Table Specs
-            document.getElementById('spec-propulsie-tip').innerText = car.propulsieTip;
-            document.getElementById('spec-sursa-p').innerText = car.sursaP;
-            document.getElementById('spec-putere-sistem').innerText = car.putereSistem;
-            document.getElementById('spec-cuplu-sistem').innerText = car.cupluSistem;
-            document.getElementById('spec-transmisie-tip').innerText = car.transmisieTip;
-            document.getElementById('spec-trepte').innerText = car.trepte;
-            document.getElementById('spec-traciune').innerText = car.tractiune;
-            document.getElementById('spec-nr-motoare').innerText = car.nrMotoare;
-            document.getElementById('spec-putere-el').innerText = car.putereEl;
-            document.getElementById('spec-cuplu-el').innerText = car.cupluEl;
-            document.getElementById('spec-baterie-cap').innerText = car.baterieCap;
-            document.getElementById('spec-incarcare-ac').innerText = car.incarcareAC;
-            document.getElementById('spec-accel').innerText = car.accel;
-            document.getElementById('spec-vmax').innerText = car.vmax;
-            document.getElementById('spec-consum').innerText = car.consum;
-            document.getElementById('spec-autonomie').innerText = car.autonomie;
-            document.getElementById('spec-lungime').innerText = car.lungime;
-            document.getElementById('spec-latime').innerText = car.latime;
-            document.getElementById('spec-inaltime').innerText = car.inaltime;
-            document.getElementById('spec-ampatament').innerText = car.ampatament;
-            document.getElementById('spec-portbagaj').innerText = car.portbagaj;
-            document.getElementById('spec-masa').innerText = car.masa;
-            document.getElementById('spec-siguranta').innerText = car.siguranta;
-            document.getElementById('spec-pret-testat').innerText = car.pretTestat;
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
 
-            updateInfographic();
+      <!-- HYUNDAI -->
+      <div id="hyundai-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
+
+      <!-- MACAN -->
+      <div id="macan-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
+
+      <!-- MAZDA -->
+      <div id="mazda-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
+
+      <!-- RENAULT -->
+      <div id="renault-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
+
+      <!-- VW -->
+      <div id="vw-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
+
+      <!-- VOLVO -->
+      <div id="volvo-details" class="details-section">
+        <h3>XXXXXXX</h3>
+        <div class="spec-table">
+          <div class="spec-category">Propulsion System</div>
+          <div class="row"><span class="label">Propulsion system type</span><span class="value">Electric (BEV)</span></div>
+          <div class="row"><span class="label">Maximum system power</span><span class="value highlight">XXXXXX hp</span></div>
+
+          <div class="spec-category">Battery</div>
+          <div class="row"><span class="label">Battery gross capacity</span><span class="value highlight">XXXXXX kWh</span></div>
+
+          <div class="spec-category">Price</div>
+          <div class="row"><span class="label">Starting price</span><span class="value">XXXXXX €</span></div>
+        </div>
+      </div>
+
+    </div> <!-- end details-column -->
+
+    <!-- DREAPTA: TOUR DAYS + GALERIE INFOGRAFICE -->
+    <div class="days-column">
+      <div class="tour-days">Tour Days</div>
+
+      <div class="day-tours-bar">
+        <button onclick="showDayInfographics(1, this)">Day 1</button>
+        <button onclick="showDayInfographics(2, this)">Day 2</button>
+        <button onclick="showDayInfographics(3, this)">Day 3</button>
+        <button onclick="showDayInfographics(4, this)">Day 4</button>
+        <button onclick="showDayInfographics(5, this)">Day 5</button>
+        <button onclick="showDayInfographics(6, this)">Day 6</button>
+        <button onclick="showDayInfographics(7, this)">Day 7</button>
+        <button onclick="showDayInfographics(8, this)">Day 8</button>
+      </div>
+
+      <!-- GALERIE ORIZONTALĂ DE INFOGRAFICE -->
+      <div id="infographics-gallery" class="infographics-container"></div>
+    </div>
+
+  </div> <!-- end details-days-wrapper -->
+
+  <!-- MODAL / LIGHTBOX DE MARIRE SI BROWSE IMAGINI -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <button class="modal-nav prev-btn" onclick="changeImage(-1)">&#10094;</button>
+    <img class="modal-content" id="expandedImg" alt="Expanded Infographic">
+    <button class="modal-nav next-btn" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const carBrands = ['Audi', 'BYD', 'Hyundai', 'Macan', 'Mazda', 'Renault', 'VW', 'Volvo'];
+    const TOTAL_DAYS = 8;
+    
+    const carBrandMap = {
+      'audi-details': 'Audi',
+      'byd-details': 'BYD',
+      'hyundai-details': 'Hyundai',
+      'macan-details': 'Macan',
+      'mazda-details': 'Mazda',
+      'renault-details': 'Renault',
+      'vw-details': 'VW',
+      'volvo-details': 'Volvo'
+    };
+
+    let currentDay = 1;
+    let selectedBrand = null;
+    let currentInfographics = [];
+    let currentIndex = 0;
+
+    function toggleDetails(id) {
+      document.querySelectorAll('.details-section')
+        .forEach(section => section.style.display = 'none');
+      
+      const target = document.getElementById(id);
+      if (target) {
+        target.style.display = 'block';
+      }
+
+      document.querySelectorAll('.day-tours-bar button')
+        .forEach(btn => btn.classList.remove('active'));
+
+      selectedBrand = carBrandMap[id];
+      renderInfographics();
+    }
+
+    function showDayInfographics(dayNumber, button) {
+      currentDay = dayNumber;
+      selectedBrand = null;
+
+      if (button) {
+        document.querySelectorAll('.day-tours-bar button')
+          .forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      }
+
+      renderInfographics();
+    }
+
+    function renderInfographics() {
+      const gallery = document.getElementById('infographics-gallery');
+      gallery.innerHTML = '';
+      currentInfographics = [];
+
+      if (selectedBrand) {
+        // PER MAȘINĂ (Toate cele 8 zile)
+        for (let day = 1; day <= TOTAL_DAYS; day++) {
+          const src = `info2025/day${day}/${selectedBrand}${day}.png`;
+          addImageToGallery(gallery, src, `${selectedBrand} - Day ${day}`);
         }
+      } else {
+        // PER ZI (Toate cele 8 mașini)
+        carBrands.forEach((brand) => {
+          const src = `info2025/day${currentDay}/${brand}${currentDay}.png`;
+          addImageToGallery(gallery, src, `${brand} - Day ${currentDay}`);
+        });
+      }
+    }
 
-        function selectDay(dayNumber) {
-            currentDay = dayNumber;
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach((btn, index) => {
-                if (index === dayNumber - 1) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-            updateInfographic();
+    function addImageToGallery(gallery, src, altText) {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = altText;
+      img.title = altText;
+      
+      img.onload = function() {
+        if (!currentInfographics.includes(src)) {
+          currentInfographics.push(src);
         }
+      };
 
-        function updateInfographic() {
-            const car = carsData[currentCarKey];
-            const imgPath = `info2025/day${currentDay}/${car.prefix}${currentDay}.png`;
-            document.getElementById('infographic-img').src = imgPath;
-        }
-    </script>
+      img.onclick = function() {
+        const activeIndex = currentInfographics.indexOf(src);
+        openModal(activeIndex !== -1 ? activeIndex : 0);
+      };
+      
+      img.onerror = function() {
+        this.style.display = 'none';
+      };
+
+      gallery.appendChild(img);
+    }
+
+    function openModal(index) {
+      if (currentInfographics.length === 0) return;
+      currentIndex = index;
+      const modal = document.getElementById('imageModal');
+      const expandedImg = document.getElementById('expandedImg');
+      
+      modal.style.display = 'flex';
+      expandedImg.src = currentInfographics[currentIndex];
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    function changeImage(direction) {
+      if (currentInfographics.length === 0) return;
+      currentIndex += direction;
+      
+      if (currentIndex < 0) {
+        currentIndex = currentInfographics.length - 1;
+      } else if (currentIndex >= currentInfographics.length) {
+        currentIndex = 0;
+      }
+
+      document.getElementById('expandedImg').src = currentInfographics[currentIndex];
+    }
+
+    document.addEventListener('keydown', function(event) {
+      const modal = document.getElementById('imageModal');
+      if (modal && modal.style.display === 'flex') {
+        if (event.key === 'ArrowLeft') changeImage(-1);
+        else if (event.key === 'ArrowRight') changeImage(1);
+        else if (event.key === 'Escape') closeModal();
+      }
+    });
+
+    document.getElementById('imageModal').addEventListener('click', function(event) {
+      if (event.target === this) closeModal();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstButton = document.querySelector('.day-tours-bar button');
+      showDayInfographics(1, firstButton);
+    });
+  </script>
 </body>
 </html>
