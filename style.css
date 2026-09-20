@@ -170,7 +170,7 @@ body {
 /* SPEC TABLE */
 .spec-table {
   margin-top: 20px;
-  width: 100%;
+  width: 100% !important;
 }
 
 .spec-table .row {
@@ -214,20 +214,20 @@ body {
   display: flex !important;
   justify-content: flex-start !important;
   align-items: flex-start !important;
-  gap: 30px !important;                 /* Distanta dintre tabel si Tour Days */
+  gap: 20px !important;                 /* Distanta egala cu gap-ul din car-grid */
   margin-top: 20px;
   width: 100%;
 }
 
-/* Detalii tehnice - Egale cu latimea a 2 imagini (280px + 280px + 20px gap) */
+/* Detalii tehnice - Latime fixa egala cu primele 2 imagini (280px + 280px + 20px gap) */
 .details-column {
-  flex: 0 0 calc(2 * 280px + 20px) !important;
-  width: calc(2 * 280px + 20px) !important;
-  max-width: 100% !important;
+  flex: 0 0 580px !important;
+  width: 580px !important;
+  max-width: 580px !important;
   padding-right: 0 !important;
 }
 
-/* Coloana dreapta (Tour Days) */
+/* Coloana dreapta (Tour Days) - Incepe fix de la a 3-a imagine */
 .days-column {
   flex: 1 !important;
   display: flex;
