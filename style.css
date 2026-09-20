@@ -225,8 +225,8 @@ body {
 }
 
 /* Coloana dreapta (Tour Days) - Lipită de detalii */
-.days-column {
-  flex: 0 0 auto;                /* Isi ia latimea exacta de care are nevoie */
+..days-column {
+  flex: 1 !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -244,11 +244,12 @@ body {
 
 /* Bara cu zile */
 .day-tours-bar {
-  display: flex;
-  flex-wrap: wrap;               /* Permite trecerea pe rand nou daca sunt multe butoane */
-  max-width: 300px;              /* Limiteaza latimea butoanelor ca sa stea frumos */
-  gap: 6px;
+  display: flex !important;
+  flex-wrap: nowrap !important; /* NU le lasa sa treaca pe randul urmator */
+  gap: 6px !important;
   margin-top: 10px;
+  width: auto !important;
+  max-width: none !important;    /* Scoate limita de latime */
 }
 
 /* Butoanele Day 1–10 */
@@ -259,6 +260,7 @@ body {
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
+  white-space: nowrap !important; /* Impiedica textul din buton sa se sparga */
   transition: 0.25s;
 }
 
