@@ -88,7 +88,7 @@
     </div> <!-- FINAL GRID -->
   </section>
 
-  <!-- LAYOUT 2 COLOANE -->
+  <!-- LAYOUT 2 COLOANE (DETALII TEHNICE + TOUR DAYS) -->
   <div class="details-days-wrapper">
 
     <!-- STÂNGA: DETALII MASINI -->
@@ -251,7 +251,8 @@
 
         </div>
       </div>
-           <!-- RENAULT -->
+
+      <!-- RENAULT -->
       <div id="renault-details" class="details-section">
         <h3>Renault 5 Roland-Garros</h3>
         <div class="spec-table">
@@ -409,6 +410,7 @@
 
         </div>
       </div>
+
       <!-- BYD -->
       <div id="byd-details" class="details-section">
         <h3>BYD Sealion 7 Design AWD</h3>
@@ -517,50 +519,90 @@
 
     </div> <!-- end details-column -->
 
-    <!-- WRAPPER NOU DETALII + TOUR DAYS -->
-<div class="details-days-wrapper">
+    <!-- DREAPTA: TOUR DAYS + GALERIE INFOGRAFICE -->
+    <div class="days-column">
+      <div class="tour-days">Tour Days</div>
 
-  <!-- STÂNGA: DETALII -->
-  <div class="details-column">
-    <!-- Aici apar detaliile în funcție de toggle -->
-  </div>
+      <div class="day-tours-bar">
+        <button onclick="showDayInfographics(1, this)">Day 1</button>
+        <button onclick="showDayInfographics(2, this)">Day 2</button>
+        <button onclick="showDayInfographics(3, this)">Day 3</button>
+        <button onclick="showDayInfographics(4, this)">Day 4</button>
+        <button onclick="showDayInfographics(5, this)">Day 5</button>
+        <button onclick="showDayInfographics(6, this)">Day 6</button>
+        <button onclick="showDayInfographics(7, this)">Day 7</button>
+        <button onclick="showDayInfographics(8, this)">Day 8</button>
+        <button onclick="showDayInfographics(9, this)">Day 9</button>
+        <button onclick="showDayInfographics(10, this)">Day 10</button>
+      </div>
 
-  <!-- DREAPTA: TOUR DAYS -->
-  <div class="days-column">
-    <div class="tour-days">Tour Days</div>
-
-    <div class="day-tours-bar">
-      <button onclick="activateDay(this)">Day 1</button>
-      <button onclick="activateDay(this)">Day 2</button>
-      <button onclick="activateDay(this)">Day 3</button>
-      <button onclick="activateDay(this)">Day 4</button>
-      <button onclick="activateDay(this)">Day 5</button>
-      <button onclick="activateDay(this)">Day 6</button>
-      <button onclick="activateDay(this)">Day 7</button>
-      <button onclick="activateDay(this)">Day 8</button>
-      <button onclick="activateDay(this)">Day 9</button>
-      <button onclick="activateDay(this)">Day 10</button>
+      <!-- GALERIE ORIZONTALĂ DE INFOGRAFICE -->
+      <div id="infographics-gallery" class="infographics-container"></div>
     </div>
+
+  </div> <!-- end details-days-wrapper -->
+
+  <!-- MODAL / LIGHTBOX PENTRU POP-UP IMAGINE MĂRITĂ -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="expandedImg" alt="Infografic mărit">
   </div>
 
-</div> <!-- end wrapper -->
+  <!-- JAVASCRIPT -->
+  <script>
+    // 1. Toggle specifiatii tehnice masina
+    function toggleDetails(id) {
+      document.querySelectorAll('.details-section')
+        .forEach(section => section.style.display = 'none');
 
-<!-- JAVASCRIPT -->
-<script>
-function toggleDetails(id) {
-  document.querySelectorAll('.details-section')
-    .forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
 
-  document.getElementById(id).style.display = 'block';
-}
+    // 2. Incarcare infografice specifice pe zile + schimbare buton activ
+    const carBrands = ['Audi', 'BYD', 'GLC', 'Mazda', 'Porsche', 'Renault', 'VW', 'Volvo'];
 
-function activateDay(button) {
-  document.querySelectorAll('.day-tours-bar button')
-    .forEach(btn => btn.classList.remove('active'));
+    function showDayInfographics(dayNumber, button) {
+      // Activați starea butonului selecționat
+      if (button) {
+        document.querySelectorAll('.day-tours-bar button')
+          .forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      }
 
-  button.classList.add('active');
-}
-</script>
+      // Curățăm galeria anterioară
+      const gallery = document.getElementById('infographics-gallery');
+      gallery.innerHTML = '';
+
+      // Adăugăm imaginile dinamice din folderul specific zilei
+      carBrands.forEach(brand => {
+        const img = document.createElement('img');
+        img.src = `infographics/day${dayNumber}/${brand}${dayNumber}.jpg`;
+        img.alt = `${brand} Day ${dayNumber}`;
+        img.onclick = function() {
+          openModal(this.src);
+        };
+        gallery.appendChild(img);
+      });
+    }
+
+    // 3. Modal / Pop-up
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const expandedImg = document.getElementById('expandedImg');
+      modal.style.display = 'flex';
+      expandedImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    // La încărcarea paginii, selectăm automat Day 1
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstButton = document.querySelector('.day-tours-bar button');
+      showDayInfographics(1, firstButton);
+    });
+  </script>
 
 </body>
 </html>
