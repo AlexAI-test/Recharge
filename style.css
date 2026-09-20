@@ -220,16 +220,19 @@ body {
   display: grid;
   grid-template-columns: 1fr 200px; /* coloana Tour Days mai îngustă */
   gap: 10px; /* mult mai aproape de detalii */
-  align-items: center; /* centrare verticală */
+  align-items: start; /* centrare verticală */
   margin-top: 10px;
+  max-width: 900px;      /* lățime totală mai mică */
+  margin-left: auto;     /* centrează pe pagină */
+  margin-right: auto;    /* centrează pe pagină */
 }
 
 /* Coloana dreapta (Tour Days) */
 .days-column {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* CENTRAT vertical */
-  align-items: center;     /* CENTRAT orizontal */
+  justify-content: flex-start; /* CENTRAT vertical */
+  align-items: flex-start;     /* CENTRAT orizontal */
 }
 
 /* Titlul Tour Days */
