@@ -11,7 +11,7 @@
   <!-- HERO -->
   <section class="hero">
     <h1>Recharge Tour 2024</h1>
-    <p>Electric Road Trip • 12 days • 9000 km</p>
+    <p>Electric Road Trip • 12 days • 5000 km</p>
     <a href="index.html" class="back-button">← Back to main page</a>
   </section>
 
@@ -449,8 +449,8 @@
         <button onclick="showDayInfographics(16, this)">Day 16</button>
       </div>
 
-      <!-- HORIZONTAL INFOGRAPHICS CONTAINER -->
-      <div id="infographics-gallery" class="infographics-container"></div>
+      <!-- INFOGRAPHICS CONTAINER -->
+      <div id="infographics-gallery" class="infographics-container grid-layout"></div>
     </div>
 
   </div> <!-- END WRAPPER -->
@@ -519,13 +519,11 @@
       currentInfographics = [];
 
       if (selectedBrand) {
-        // PER BRAND (All 12 Active Days)
         activeDays.forEach((day) => {
           const basePath = `tour2024/Day${day}/${selectedBrand}${day}`;
           addImageToGalleryWithFallback(gallery, basePath, `${selectedBrand} - Day ${day}`);
         });
       } else {
-        // PER DAY (All 8 Cars)
         carBrands.forEach((brand) => {
           const basePath = `tour2024/Day${currentDay}/${brand}${currentDay}`;
           addImageToGalleryWithFallback(gallery, basePath, `${brand} - Day ${currentDay}`);
@@ -542,7 +540,7 @@
       img.title = altText;
 
       const imgIndex = currentInfographics.length;
-      currentInfographics.push(''); // Reserve space in array
+      currentInfographics.push('');
 
       function tryNextExtension() {
         if (extIndex < extensions.length) {
@@ -592,7 +590,6 @@
       document.getElementById('expandedImg').src = currentInfographics[currentIndex];
     }
 
-    // Keyboard Navigation
     document.addEventListener('keydown', function(event) {
       const modal = document.getElementById('imageModal');
       if (modal && modal.style.display === 'flex') {
@@ -602,7 +599,6 @@
       }
     });
 
-    // Close Modal on Background Click
     document.getElementById('imageModal').addEventListener('click', function(event) {
       if (event.target === this) closeModal();
     });
