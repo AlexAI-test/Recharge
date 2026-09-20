@@ -1,70 +1,388 @@
-/* =========================================================
-   CONTAINER GENERAL & ALINIERE PENTRU TOUR DAYS / INFOGRAFICE
-   ========================================================= */
-
-/* Containerul principal din dreapta care include butoanele de Tour Days și Infograficele */
-.tour-days-section,
-.tour-days-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-  gap: 12px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
 }
 
-/* Containerul cu butoanele pentru zile (Day 1, Day 2, etc.) */
-.tour-days-nav,
-.days-buttons-container {
+/* HERO */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px;
+  background: url("images/hero-electric-car.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  color: white;
+  text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #4db8ff;
+  font-size: 18px;
+}
+
+.buttons a {
+  margin: 10px;
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* OVERVIEW */
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* CARS */
+.cars {
+  padding: 40px;
+}
+
+.cars h2 {
+  color: white;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.car-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  opacity: 0;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.3s;
+}
+
+.car-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay a {
+  margin-top: 10px;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.details-section {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.infogrid {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.infogrid img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid #4db8ff;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(0, 0, 0, 0.55);
+  transform: scale(1.05);
+}
+
+/* SPEC TABLE */
+.spec-table {
+  margin-top: 20px;
+  width: 100% !important;
+}
+
+.spec-table .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.spec-table .label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.spec-table .value {
+  color: #cce6ff;
+  font-weight: 500;
+  text-align: right;
+  min-width: 150px;
+}
+
+/* Category headers */
+.spec-category {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+  padding-bottom: 6px;
+}
+
+/* Highlight important values */
+.value.highlight {
+  color: #4ec3ff;
+  font-weight: 700;
+}
+
+/* ALINIERE COMPACTA DETALII + TOUR DAYS */
+.details-days-wrapper {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  margin-top: 20px;
+  padding: 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Detalii tehnice */
+.details-column {
+  flex: 0 0 680px !important;
+  width: 680px !important;
+  max-width: 680px !important;
+  padding-right: 0 !important;
+}
+
+/* Coloana dreapta (Tour Days) */
+.days-column {
+  flex: 1 !important;
+  min-width: 0; /* Previne overflow-ul orizontal pe flex items */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Titlul Tour Days */
+.tour-days {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Bara cu zile */
+.day-tours-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-top: 10px;
+  width: 100% !important;
+}
+
+/* Butoanele Day */
+.day-tours-bar button {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap !important;
+  transition: 0.25s;
+}
+
+.day-tours-bar button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.day-tours-bar button.active {
+  background: #4ec3ff;
+  color: black;
+  font-weight: bold;
+  border-color: #4ec3ff;
+}
+
+/* GALERIE ORIZONTALĂ COMPACTĂ (PENTRU TOȚI ANII: 2024, 2025, 2026) */
+.infographics-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important; /* Treci pe rândul 2 când ajungi la limita din dreapta */
+  gap: 8px !important;
+  margin-top: 15px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.infographics-container img {
+  height: 140px !important; /* Mărimea compactă fixă din Tour 2025 */
+  width: auto !important;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  object-fit: contain;
+}
+
+.infographics-container img:hover {
+  transform: scale(1.05);
+  border-color: #4ec3ff;
+}
+
+/* Suprascriere layout vechi 2024 pentru a fi uniform cu 2025/2026 */
+.infographics-container.grid-layout {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.infographics-container.grid-layout img {
+  width: auto !important;
+  height: 140px !important;
+  max-height: 140px !important;
+}
+
+/* MODAL / LIGHTBOX (POP-UP IMAGINI) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
   align-items: center;
 }
 
-/* =========================================================
-   GRID-UL PENTRU INFOGRAFICE (COMPACT + AUTOMATIC ROW WRAP)
-   ========================================================= */
-
-/* Containerul care ține cardurile cu infografice */
-.infographics-container,
-.infographics-grid,
-.days-container {
-  display: flex;
-  flex-direction: row;        /* Aliniere orizontală */
-  flex-wrap: wrap;           /* Trece automat pe rândul 2 la depășirea lățimii */
-  gap: 8px;                  /* Spațiere compactă între infografice */
-  align-items: flex-start;
-  width: 100%;
-  max-width: 100%;           /* Oprește extinderea dincolo de ultimul Car Card */
-  box-sizing: border-border;
+.modal-content {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+  object-fit: contain;
 }
 
-/* =========================================================
-   STILUL FIECĂRUI INFOGRAFIC INDIVIDUAL (CARD DE ZI)
-   ========================================================= */
-
-.infographic-card,
-.day-card,
-.tour-day-item {
-  width: 75px;               /* Dimensiune fixă compactă (la fel ca în 2025) */
-  flex-shrink: 0;            /* Previne strângerea/deformarea imaginilor */
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease-in-out;
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10002;
+  transition: color 0.2s ease;
 }
 
-.infographic-card:hover,
-.day-card:hover {
-  transform: translateY(-2px);
+.close-modal:hover {
+  color: #4ec3ff;
 }
 
-/* Ajustare imagine în interiorul cardului */
-.infographic-card img,
-.day-card img,
-.tour-day-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+/* STILURI SĂGEȚI MODAL / LIGHTBOX */
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  font-size: 32px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+  user-select: none;
+  z-index: 10001;
+}
+
+.modal-nav:hover {
+  background: #4ec3ff;
+  color: #000000;
+  border-color: #4ec3ff;
+}
+
+.prev-btn {
+  left: 25px;
+}
+
+.next-btn {
+  right: 25px;
 }
