@@ -211,21 +211,24 @@ body {
 
 /* ALINIERE COMPACTA DETALII + TOUR DAYS */
 .details-days-wrapper {
-  display: flex;
-  justify-content: flex-start; /* Aliniaza ambele elemente la stanga */
-  align-items: flex-start;
-  gap: 25px;                     /* Distanta mica direct intre ele */
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 30px !important;                 /* Distanta dintre tabel si Tour Days */
   margin-top: 20px;
+  width: 100%;
 }
 
-/* Detalii tehnice - Lățime controlată */
+/* Detalii tehnice - Egale cu latimea a 2 imagini (280px + 280px + 20px gap) */
 .details-column {
-  flex: 0 1 500px;               /* Ocupa maxim 500px, adaptabil */
-  padding-right: 0;
+  flex: 0 0 calc(2 * 280px + 20px) !important;
+  width: calc(2 * 280px + 20px) !important;
+  max-width: 100% !important;
+  padding-right: 0 !important;
 }
 
-/* Coloana dreapta (Tour Days) - Lipită de detalii */
-..days-column {
+/* Coloana dreapta (Tour Days) */
+.days-column {
   flex: 1 !important;
   display: flex;
   flex-direction: column;
@@ -238,18 +241,18 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 
-/* Bara cu zile */
+/* Bara cu zile pe un singur rand orizontal */
 .day-tours-bar {
   display: flex !important;
-  flex-wrap: nowrap !important; /* NU le lasa sa treaca pe randul urmator */
+  flex-wrap: nowrap !important; /* Toate pe o singura linie */
   gap: 6px !important;
   margin-top: 10px;
   width: auto !important;
-  max-width: none !important;    /* Scoate limita de latime */
+  max-width: none !important;
 }
 
 /* Butoanele Day 1–10 */
@@ -260,7 +263,7 @@ body {
   padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
-  white-space: nowrap !important; /* Impiedica textul din buton sa se sparga */
+  white-space: nowrap !important;
   transition: 0.25s;
 }
 
