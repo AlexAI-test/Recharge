@@ -542,15 +542,23 @@
 
   </div> <!-- end details-days-wrapper -->
 
-  <!-- MODAL / LIGHTBOX PENTRU POP-UP IMAGINE MĂRITĂ -->
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close-modal">&times;</span>
+  <!-- MODAL / LIGHTBOX CU NAVIGARE (SĂGEȚI) -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    
+    <!-- Buton Săgeată Stânga -->
+    <button class="modal-nav prev-btn" onclick="changeImage(-1)">&#10094;</button>
+    
+    <!-- Imaginea Mărită -->
     <img class="modal-content" id="expandedImg" alt="Infografic mărit">
+    
+    <!-- Buton Săgeată Dreapta -->
+    <button class="modal-nav next-btn" onclick="changeImage(1)">&#10095;</button>
   </div>
 
   <!-- JAVASCRIPT -->
   <script>
-    // 1. Toggle specifiatii tehnice masina
+    // 1. Toggle specificații tehnice mașină
     function toggleDetails(id) {
       document.querySelectorAll('.details-section')
         .forEach(section => section.style.display = 'none');
@@ -558,51 +566,93 @@
       document.getElementById(id).style.display = 'block';
     }
 
-    // 2. Incarcare infografice specifice pe zile + schimbare buton activ
+    // 2. Gestionare infografice pe zile
     const carBrands = ['Audi', 'BYD', 'GLC', 'Mazda', 'Porsche', 'Renault', 'VW', 'Volvo'];
+    let currentInfographics = []; // Păstrează lista de imagini pentru ziua curentă
+    let currentIndex = 0;        // Indexul imaginii deschise în modal
 
     function showDayInfographics(dayNumber, button) {
-      // Activați starea butonului selecționat
       if (button) {
         document.querySelectorAll('.day-tours-bar button')
           .forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
       }
 
-      // Curățăm galeria anterioară
       const gallery = document.getElementById('infographics-gallery');
       gallery.innerHTML = '';
+      currentInfographics = []; // Resetăm lista pentru ziua selectată
 
-      // Adăugăm imaginile dinamice din folderul specific zilei
-      carBrands.forEach(brand => {
+      carBrands.forEach((brand, index) => {
+        const src = `infographics/day${dayNumber}/${brand}${dayNumber}.jpg`;
+        currentInfographics.push(src);
+
         const img = document.createElement('img');
-        img.src = `infographics/day${dayNumber}/${brand}${dayNumber}.jpg`;
+        img.src = src;
         img.alt = `${brand} Day ${dayNumber}`;
         img.onclick = function() {
-          openModal(this.src);
+          openModal(index); // Deschidem modalul transmisiind indexul imaginii
         };
+        
+        // Ascunde imaginea dacă fișierul încă nu există pe GitHub
+        img.onerror = function() {
+          this.style.display = 'none';
+        };
+
         gallery.appendChild(img);
       });
     }
 
-    // 3. Modal / Pop-up
-    function openModal(src) {
+    // 3. Modal / Pop-up cu navigare
+    function openModal(index) {
+      currentIndex = index;
       const modal = document.getElementById('imageModal');
       const expandedImg = document.getElementById('expandedImg');
+      
       modal.style.display = 'flex';
-      expandedImg.src = src;
+      expandedImg.src = currentInfographics[currentIndex];
     }
 
     function closeModal() {
       document.getElementById('imageModal').style.display = 'none';
     }
 
-    // La încărcarea paginii, selectăm automat Day 1
+    function changeImage(direction) {
+      // Calculăm noul index (cu efect de buclă/loop continuu)
+      currentIndex += direction;
+      
+      if (currentIndex < 0) {
+        currentIndex = currentInfographics.length - 1;
+      } else if (currentIndex >= currentInfographics.length) {
+        currentIndex = 0;
+      }
+
+      document.getElementById('expandedImg').src = currentInfographics[currentIndex];
+    }
+
+    // Navigare de la tastatură (Stânga, Dreapta, Escape)
+    document.addEventListener('keydown', function(event) {
+      const modal = document.getElementById('imageModal');
+      if (modal.style.display === 'flex') {
+        if (event.key === 'ArrowLeft') {
+          changeImage(-1);
+        } else if (event.key === 'ArrowRight') {
+          changeImage(1);
+        } else if (event.key === 'Escape') {
+          closeModal();
+        }
+      }
+    });
+
+    // Închidere modal la click pe fundalul negru din afara imaginii
+    document.getElementById('imageModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closeModal();
+      }
+    });
+
+    // Selectăm automat Day 1 la încărcare
     document.addEventListener('DOMContentLoaded', () => {
       const firstButton = document.querySelector('.day-tours-bar button');
       showDayInfographics(1, firstButton);
     });
   </script>
-
-</body>
-</html>
