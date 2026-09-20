@@ -332,3 +332,34 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* STILURI PENTRU SĂGEȚILE DIN MODAL */
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 30px;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+  user-select: none;
+  z-index: 10000;
+}
+
+.modal-nav:hover {
+  background: #4ec3ff;
+  color: black;
+  border-color: #4ec3ff;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
