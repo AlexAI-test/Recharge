@@ -542,7 +542,14 @@
 
   </div> <!-- end details-days-wrapper -->
 
-  <!-- JAVASCRIPT -->
+  <!-- MODAL / LIGHTBOX DE MARIRE SI BROWSE IMAGINI -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <button class="modal-nav prev-btn" onclick="changeImage(-1)">&#10094;</button>
+    <img class="modal-content" id="expandedImg" alt="Expanded Infographic">
+    <button class="modal-nav next-btn" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
   <!-- JAVASCRIPT -->
   <script>
     const carBrands = ['Audi', 'BYD', 'GLC', 'Mazda', 'Porsche', 'Renault', 'VW', 'Volvo'];
@@ -567,7 +574,11 @@
     function toggleDetails(id) {
       document.querySelectorAll('.details-section')
         .forEach(section => section.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
+      
+      const target = document.getElementById(id);
+      if (target) {
+        target.style.display = 'block';
+      }
 
       document.querySelectorAll('.day-tours-bar button')
         .forEach(btn => btn.classList.remove('active'));
@@ -578,7 +589,7 @@
 
     function showDayInfographics(dayNumber, button) {
       currentDay = dayNumber;
-      selectedBrand = null;
+      selectedBrand = null; // Resetam brand-ul selectat pentru a vedea toate masinile pe ziua respectiva
 
       if (button) {
         document.querySelectorAll('.day-tours-bar button')
@@ -615,7 +626,6 @@
       img.alt = altText;
       img.title = altText;
       
-      // Adăugăm în listă doar când imaginea există cu succes
       img.onload = function() {
         if (!currentInfographics.includes(src)) {
           currentInfographics.push(src);
@@ -623,7 +633,6 @@
       };
 
       img.onclick = function() {
-        // Găsim indexul exact al imaginii curente în listă
         const activeIndex = currentInfographics.indexOf(src);
         openModal(activeIndex !== -1 ? activeIndex : 0);
       };
@@ -680,3 +689,5 @@
       showDayInfographics(1, firstButton);
     });
   </script>
+</body>
+</html>
