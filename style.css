@@ -1,10 +1,11 @@
+/* ========== GLOBAL ========== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: black;
 }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero {
   position: relative;
   text-align: center;
@@ -30,9 +31,6 @@ body {
   z-index: 2;
 }
 
-
-
-
 .hero h1 {
   font-size: 40px;
   margin-bottom: 10px;
@@ -52,7 +50,7 @@ body {
   border-radius: 8px;
 }
 
-/* OVERVIEW */
+/* ========== OVERVIEW CARDS ========== */
 .overview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -77,9 +75,13 @@ body {
   border-radius: 8px;
 }
 
-/* CARS */
+/* ========== TESTED CARS GRID ========== */
 .cars {
   padding: 40px;
+}
+
+.cars h2 {
+  color: white;
 }
 
 .car-grid {
@@ -127,6 +129,7 @@ body {
   text-decoration: none;
 }
 
+/* ========== DETAILS SECTION (LEFT) ========== */
 .details-section {
   display: none;
   background: rgba(0,0,0,0.5);
@@ -152,12 +155,12 @@ body {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: rgba(0, 0, 0, 0.35); /* transparent black */
+  background: rgba(0, 0, 0, 0.35);
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-size: 16px;
-  backdrop-filter: blur(4px); /* optional: glass effect */
+  backdrop-filter: blur(4px);
   transition: 0.3s;
 }
 
@@ -166,16 +169,17 @@ body {
   transform: scale(1.05);
 }
 
+/* ========== SPEC TABLE ========== */
 .spec-table {
   margin-top: 20px;
   width: 100%;
-  max-width: 700px; /* ca să nu fie prea lat */
+  max-width: 700px;
 }
 
 .spec-table .row {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
@@ -188,10 +192,9 @@ body {
   color: #cce6ff;
   font-weight: 500;
   text-align: right;
-  min-width: 150px; /* împinge valorile spre dreapta */
+  min-width: 150px;
 }
 
-/* Category headers */
 .spec-category {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -202,40 +205,31 @@ body {
   padding-bottom: 6px;
 }
 
-/* Highlight important values */
 .value.highlight {
-  color: #4ec3ff; /* electric blue */
+  color: #4ec3ff;
   font-weight: 700;
 }
 
-/* Extra spacing between rows */
-.spec-table .row {
-  padding: 10px 0;
-}
-
-
-
-/* GRID DETALII + TOUR DAYS */
+/* ========== DETAILS + TOUR DAYS WRAPPER ========== */
 .details-days-wrapper {
   display: grid;
-  grid-template-columns: 1fr 200px; /* Tour Days mai aproape */
-  gap: 20px;                        /* spațiu între coloane */
-  align-items: start;
+  grid-template-columns: 1fr 240px; /* Tour Days mai aproape */
+  gap: 30px;
+  margin-top: 40px;
 
-  max-width: 900px;                 /* wrapper mai îngust */
-  margin: 30px auto;                /* CENTRARE pe pagină */
-  padding: 0 10px;                  /* puțin spațiu lateral */
+  max-width: 1100px; /* wrapper îngust */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Coloana dreapta (Tour Days) */
+/* ========== TOUR DAYS (RIGHT) ========== */
 .days-column {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* CENTRAT vertical */
-  align-items: flex-start;     /* CENTRAT orizontal */
+  justify-content: flex-start;
+  align-items: flex-start; /* nu îl împinge spre dreapta */
 }
 
-/* Titlul Tour Days */
 .tour-days {
   background: transparent;
   padding: 0;
@@ -245,20 +239,18 @@ body {
   font-weight: 700;
 }
 
-/* Bara cu zile */
 .day-tours-bar {
   display: flex;
   flex-wrap: nowrap;
   gap: 6px;
-  margin-top: 4px; /* mai apropiat de titlu */
+  margin-top: 10px;
 }
 
-/* Butoanele Day 1–10 */
 .day-tours-bar button {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.4);
   color: white;
-  padding: 4px 13px;
+  padding: 6px 10px;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.25s;
@@ -267,23 +259,3 @@ body {
 .day-tours-bar button:hover {
   background: rgba(255,255,255,0.35);
 }
-
-/* Detalii tehnice */
-.details-column {
-  padding-right: 20px;
-}
-
-.details-section {
-  display: none;
-  background: rgba(0,0,0,0.5);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  color: white;
-}
-
-.cars h2 {
-  color: white;
-}
-
-
