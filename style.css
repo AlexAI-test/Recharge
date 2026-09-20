@@ -230,7 +230,7 @@ body {
   padding-right: 0 !important;
 }
 
-/* Coloana dreapta (Tour Days) - Aliniata fix sub a 3-a poza */
+/* Coloana dreapta (Tour Days) */
 .days-column {
   flex: 1 !important;
   display: flex;
@@ -321,6 +321,7 @@ body {
   max-height: 90vh;
   border-radius: 8px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+  object-fit: contain;
 }
 
 .close-modal {
@@ -331,6 +332,12 @@ body {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 10002;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #4ec3ff;
 }
 
 /* STILURI SĂGEȚI MODAL / LIGHTBOX */
@@ -347,7 +354,7 @@ body {
   border-radius: 50%;
   transition: all 0.25s ease;
   user-select: none;
-  z-index: 10001; /* Z-index ridicat pentru a fi peste imagine */
+  z-index: 10001;
 }
 
 .modal-nav:hover {
