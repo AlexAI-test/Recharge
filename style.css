@@ -30,9 +30,6 @@ body {
   z-index: 2;
 }
 
-
-
-
 .hero h1 {
   font-size: 40px;
   margin-bottom: 10px;
@@ -80,6 +77,10 @@ body {
 /* CARS */
 .cars {
   padding: 40px;
+}
+
+.cars h2 {
+  color: white;
 }
 
 .car-grid {
@@ -131,7 +132,7 @@ body {
   display: none;
   background: rgba(0,0,0,0.5);
   padding: 20px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   border-radius: 10px;
   color: white;
 }
@@ -157,7 +158,7 @@ body {
   text-decoration: none;
   border-radius: 8px;
   font-size: 16px;
-  backdrop-filter: blur(4px); /* optional: glass effect */
+  backdrop-filter: blur(4px); /* glass effect */
   transition: 0.3s;
 }
 
@@ -166,16 +167,16 @@ body {
   transform: scale(1.05);
 }
 
+/* SPEC TABLE */
 .spec-table {
   margin-top: 20px;
   width: 100%;
-  max-width: 700px; /* ca să nu fie prea lat */
 }
 
 .spec-table .row {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
@@ -188,7 +189,7 @@ body {
   color: #cce6ff;
   font-weight: 500;
   text-align: right;
-  min-width: 150px; /* împinge valorile spre dreapta */
+  min-width: 150px;
 }
 
 /* Category headers */
@@ -208,53 +209,24 @@ body {
   font-weight: 700;
 }
 
-/* Extra spacing between rows */
-.spec-table .row {
-  padding: 10px 0;
-}
-
-
+/* ALINIERE COMPACTA DETALII + TOUR DAYS */
 .details-days-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.tour-days {
-  background: #f7d64a;
-  padding: 16px;
-  border-radius: 12px;
-  color: white;
-}
-
-.day-tours-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.day-tours-bar button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* GRID DETALII + TOUR DAYS */
-.details-days-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto; /* coloana dreapta se micșorează automat */
-  align-items: start;
-  gap: 20px;
+  justify-content: flex-start; /* Aliniaza ambele elemente la stanga */
+  align-items: flex-start;
+  gap: 25px;                     /* Distanta mica direct intre ele */
   margin-top: 20px;
 }
 
-/* Coloana dreapta (Tour Days) */
+/* Detalii tehnice - Lățime controlată */
+.details-column {
+  flex: 0 1 500px;               /* Ocupa maxim 500px, adaptabil */
+  padding-right: 0;
+}
+
+/* Coloana dreapta (Tour Days) - Lipită de detalii */
 .days-column {
+  flex: 0 0 auto;                /* Isi ia latimea exacta de care are nevoie */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -262,7 +234,7 @@ body {
 
 /* Titlul Tour Days */
 .tour-days {
-  background: transparent; /* scoate galbenul */
+  background: transparent;
   padding: 0;
   margin: 0;
   color: white;
@@ -273,7 +245,8 @@ body {
 /* Bara cu zile */
 .day-tours-bar {
   display: flex;
-  flex-wrap: nowrap; /* un singur rând */
+  flex-wrap: wrap;               /* Permite trecerea pe rand nou daca sunt multe butoane */
+  max-width: 300px;              /* Limiteaza latimea butoanelor ca sa stea frumos */
   gap: 6px;
   margin-top: 10px;
 }
@@ -291,23 +264,4 @@ body {
 
 .day-tours-bar button:hover {
   background: rgba(255,255,255,0.35);
-}
-
-
-/* Detalii tehnice */
-.details-column {
-  padding-right: 20px;
-}
-
-.details-section {
-  display: none;
-  background: rgba(0,0,0,0.5);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  color: white;
-}
-
-.cars h2 {
-  color: white;
 }
